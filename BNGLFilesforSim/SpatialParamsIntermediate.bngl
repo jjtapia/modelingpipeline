@@ -1,0 +1,1 @@
+readFile({file=>"BlenderSpatialParams/meanEN0_5std_cell_10seed4_spatialParams.bngl"})

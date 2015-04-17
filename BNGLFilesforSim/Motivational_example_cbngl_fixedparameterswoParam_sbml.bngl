@@ -1,0 +1,747 @@
+###
+#@notes:'This is a plain translation of an SBML model created on 23/02/2015. The original model has 78 molecules and 354 reactions. The translated model has 78 molecules and 354 rules'
+###
+begin model
+begin parameters
+	vol_CP 573.69562
+	sa_PM 944.23401
+	vol_NU 194.36163
+	sa_NM 344.61847
+	vol_EN 2.223953
+	sa_EM 139.2952
+	vol_EC 3101.9412
+	sa_EC 2002.7205
+	nEndo 80.0
+	eff_width 1.0
+	nAvo 6.022e+23
+	cNP 20.0
+	cIm 4e-09
+	DNA0 2.0
+	kp_LR 0.1
+	km_LR 1.0
+	kp_LL 0.1
+	km_LL 1.0
+	k_R_endo 1.0
+	k_recycle 0.1
+	k_R_transphos 1.0
+	k_R_dephos 0.1
+	kp_R_TF 0.1
+	km_R_TF 0.1
+	kp_R_TFp 0.1
+	km_R_TFp 10.0
+	k_TF_transphos 1.0
+	k_TF_dephos 0.1
+	kp_TF_TF 1.0
+	km_TF_TF 0.1
+	kp_TF_p1 1.0
+	km_TF_p1 0.1
+	k_transcribe 1.0
+	k_translate 1.0
+	k_mRNA_to_CP 1.0
+	k_mRNA_deg 1.0
+	k_P_deg 0.1
+	k_Im_bind_CP 0.1
+	k_Im_unbind_CP 0.1
+	k_Im_bind_NU 0.1
+	k_Im_unbind_NU 10.0
+	k_Im_enters_NP 0.1
+	k_Im_exits_NP 1.0
+	k_Im_cross_NP 1.0
+	kp_P1_p2 1.0
+	km_P1_p2 0.1
+	vol_PM 944.23401*1.0
+	vol_NM 344.61847*1.0
+	vol_EM 139.2952*1.0
+	L0 6.8e-09*6.022e+23* 3101.9412-573.69562 * 1e-15
+	R0 5e-08*6.022e+23*0* 1e-15
+	TF0 5e-09*6.022e+23* 573.69562-194.36163-2.223953 * 1e-15
+	Im0 4e-09*6.022e+23* 573.69562-194.36163-2.223953 * 1e-15
+	NP0 20.0*0
+end parameters
+begin compartments
+	EC  3  2528.24554443
+	PM  3  944.234008789
+	CP  3  377.110031366
+	NM  3  344.618469238
+	NU  3  194.361633301
+	EM  3  139.295196533
+	EN  3  2.22395300865
+	cell 3 1.0
+end compartments
+begin molecule types
+	EC__L__d_r__()
+	PM__R__l_tfY__()
+	CP__TF__dY_dna_im_r__()
+	NU__DNA__p1_p2__()
+	CP__Im__cargo_fg__()
+	NM__NP__fg__()
+	CP__Sink____()
+	PM__L__d_r1__EC_R__l1_tfY__()
+	EC__L__d1_r___L__d1_r__()
+	NM__Im__cargo_fg1__CP_NP__fg1__()
+	PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfY__()
+	PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfY__()
+	NM__Im__cargo_fg1__NU_NP__fg1__()
+	EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfY__()
+	PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfpY__()
+	NU__Im__cargo_fg__()
+	EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfY__()
+	EM__R__l_tfY__()
+	PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfpY__()
+	PM__R__l_tfpY__()
+	EM__L__d_r1__EN_R__l1_tfY__()
+	PM__L__d_r1__EC_R__l1_tfpY__()
+	EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfpY__()
+	PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY___R__l3_tfpY__()
+	PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfpY4___TF__dY_dna_im_r4__CP()
+	EN__L__d1_r___L__d1_r__()
+	EN__L__d_r__()
+	EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfpY__()
+	EM__R__l_tfpY__()
+	PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfpY3___TF__dY_dna_im_r3__CP()
+	PM__R__l_tfpY1___TF__dY_dna_im_r1__CP()
+	EM__L__d_r1__EN_R__l1_tfpY__()
+	PM__L__d_r1__EC_R__l1_tfpY2___TF__dY_dna_im_r2__CP()
+	EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY___R__l3_tfpY__()
+	EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfpY4___TF__dY_dna_im_r4__CP()
+	PM__L__d1_r2__EC_L__d1_r3__EC_R__l3_tfpY4___R__l2_tfpY___TF__dY_dna_im_r4__CP()
+	PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dY_dna_im_r5__CP()
+	EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfpY3___TF__dY_dna_im_r3__CP()
+	EM__R__l_tfpY1___TF__dY_dna_im_r1__CP()
+	EM__L__d_r1__EN_R__l1_tfpY2___TF__dY_dna_im_r2__CP()
+	EM__L__d1_r2__EN_L__d1_r3__EN_R__l3_tfpY4___R__l2_tfpY___TF__dY_dna_im_r4__CP()
+	EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dY_dna_im_r5__CP()
+	PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP()
+	PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfpY3___TF__dpY_dna_im_r3__CP()
+	PM__R__l_tfpY1___TF__dpY_dna_im_r1__CP()
+	PM__L__d_r1__EC_R__l1_tfpY2___TF__dpY_dna_im_r2__CP()
+	EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP()
+	PM__L__d1_r2__EC_L__d1_r3__EC_R__l3_tfpY4___R__l2_tfpY___TF__dpY_dna_im_r4__CP()
+	CP__TF__dpY_dna_im_r__()
+	PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY4___R__l3_tfpY5___TF__dpY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP()
+	PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfpY4___TF__dpY_dna_im_r4__CP()
+	EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfpY3___TF__dpY_dna_im_r3__CP()
+	EM__R__l_tfpY1___TF__dpY_dna_im_r1__CP()
+	EM__L__d_r1__EN_R__l1_tfpY2___TF__dpY_dna_im_r2__CP()
+	EM__L__d1_r2__EN_L__d1_r3__EN_R__l3_tfpY4___R__l2_tfpY___TF__dpY_dna_im_r4__CP()
+	EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY4___R__l3_tfpY5___TF__dpY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP()
+	EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfpY4___TF__dpY_dna_im_r4__CP()
+	CP__TF__dpY1_dna_im_r___TF__dpY1_dna_im_r__()
+	CP__Im__cargo12_fg___TF__dpY3_dna_im1_r___TF__dpY3_dna_im2_r__()
+	NM__Im__cargo12_fg3__CP_NP__fg3___TF__dpY4_dna_im1_r__CP_TF__dpY4_dna_im2_r__CP()
+	NM__Im__cargo12_fg3__NU_NP__fg3___TF__dpY4_dna_im1_r__NU_TF__dpY4_dna_im2_r__NU()
+	NU__TF__dpY1_dna_im_r___TF__dpY1_dna_im_r__()
+	NU__Im__cargo12_fg___TF__dpY3_dna_im1_r___TF__dpY3_dna_im2_r__()
+	NU__TF__dpY_dna_im_r__()
+	NU__DNA__p112_p2___TF__dpY3_dna1_im_r___TF__dpY3_dna2_im_r__()
+	NU__mRNA1____()
+	CP__mRNA1____()
+	CP__P1__dna_im__()
+	CP__Im__cargo1_fg___P1__dna_im1__()
+	NM__Im__cargo1_fg2__CP_NP__fg2___P1__dna_im1__CP()
+	NM__Im__cargo1_fg2__NU_NP__fg2___P1__dna_im1__NU()
+	NU__P1__dna_im__()
+	NU__Im__cargo1_fg___P1__dna_im1__()
+	NU__DNA__p1_p21___P1__dna1_im__()
+	NU__DNA__p112_p23___P1__dna3_im___TF__dpY4_dna1_im_r___TF__dpY4_dna2_im_r__()
+	NU__mRNA2____()
+	CP__mRNA2____()
+	CP__P2____()
+end molecule types
+begin seed species
+	@EC:EC__L__d_r__() 2673.7996 #EC__L__d_r__
+	@PM:PM__R__l_tfY__() 17769.364 #PM__R__l_tfY__
+	@CP:CP__TF__dY_dna_im_r__() 67.049098 #CP__TF__dY_dna_im_r__
+	@NU:NU__DNA__p1_p2__() 1.633256 #NU__DNA__p1_p2__
+	@CP:CP__Im__cargo_fg__() 187.31541 #CP__Im__cargo_fg__
+	@NM:NM__NP__fg__() 6268.4094 #NM__NP__fg__
+	@CP:$CP__Sink____() 0.0 #CP__Sink____
+	@PM:PM__L__d_r1__EC_R__l1_tfY__() 1772.8761 #PM__L__d_r1__EC_R__l1_tfY__
+	@EC:EC__L__d1_r___L__d1_r__() 141.45003 #EC__L__d1_r___L__d1_r__
+	@NM:NM__Im__cargo_fg1__CP_NP__fg1__() 311.49092 #NM__Im__cargo_fg1__CP_NP__fg1__
+	@PM:PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfY__() 162.75402 #PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfY__
+	@PM:PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfY__() 81.204514 #PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfY__
+	@NM:NM__Im__cargo_fg1__NU_NP__fg1__() 311.85479 #NM__Im__cargo_fg1__NU_NP__fg1__
+	@EM:EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfY__() 59.716777 #EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfY__
+	@PM:PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfpY__() 85.204396 #PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfpY__
+	@NU:NU__Im__cargo_fg__() 96.703276 #NU__Im__cargo_fg__
+	@EM:EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfY__() 427.04351 #EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfY__
+	@EM:EM__R__l_tfY__() 444.8238 #EM__R__l_tfY__
+	@PM:PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfpY__() 65.457659 #PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfpY__
+	@PM:PM__R__l_tfpY__() 2857.3652 #PM__R__l_tfpY__
+	@EM:EM__L__d_r1__EN_R__l1_tfY__() 435.84163 #EM__L__d_r1__EN_R__l1_tfY__
+	@PM:PM__L__d_r1__EC_R__l1_tfpY__() 401.4259 #PM__L__d_r1__EC_R__l1_tfpY__
+	@EM:EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfpY__() 187.91584 #EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfpY__
+	@PM:PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY___R__l3_tfpY__() 31.135264 #PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY___R__l3_tfpY__
+	@PM:PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfpY4___TF__dY_dna_im_r4__CP() 8.9113456 #PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfpY4___TF__dY_dna_im_r4__CP
+	@EN:EN__L__d1_r___L__d1_r__() 10.678931 #EN__L__d1_r___L__d1_r__
+	@EN:EN__L__d_r__() 21.783487 #EN__L__d_r__
+	@EM:EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfpY__() 575.28938 #EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfpY__
+	@EM:EM__R__l_tfpY__() 597.80512 #EM__R__l_tfpY__
+	@PM:PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfpY3___TF__dY_dna_im_r3__CP() 8.7644482 #PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfpY3___TF__dY_dna_im_r3__CP
+	@PM:PM__R__l_tfpY1___TF__dY_dna_im_r1__CP() 643.22982 #PM__R__l_tfpY1___TF__dY_dna_im_r1__CP
+	@EM:EM__L__d_r1__EN_R__l1_tfpY__() 586.43862 #EM__L__d_r1__EN_R__l1_tfpY__
+	@PM:PM__L__d_r1__EC_R__l1_tfpY2___TF__dY_dna_im_r2__CP() 73.501509 #PM__L__d_r1__EC_R__l1_tfpY2___TF__dY_dna_im_r2__CP
+	@EM:EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY___R__l3_tfpY__() 177.8234 #EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY___R__l3_tfpY__
+	@EM:EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfpY4___TF__dY_dna_im_r4__CP() 19.679435 #EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfpY4___TF__dY_dna_im_r4__CP
+	@PM:PM__L__d1_r2__EC_L__d1_r3__EC_R__l3_tfpY4___R__l2_tfpY___TF__dY_dna_im_r4__CP() 5.7506429 #PM__L__d1_r2__EC_L__d1_r3__EC_R__l3_tfpY4___R__l2_tfpY___TF__dY_dna_im_r4__CP
+	@PM:PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dY_dna_im_r5__CP() 0.17853965 #PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dY_dna_im_r5__CP
+	@EM:EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfpY3___TF__dY_dna_im_r3__CP() 69.607826 #EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfpY3___TF__dY_dna_im_r3__CP
+	@EM:EM__R__l_tfpY1___TF__dY_dna_im_r1__CP() 72.440557 #EM__R__l_tfpY1___TF__dY_dna_im_r1__CP
+	@EM:EM__L__d_r1__EN_R__l1_tfpY2___TF__dY_dna_im_r2__CP() 71.009906 #EM__L__d_r1__EN_R__l1_tfpY2___TF__dY_dna_im_r2__CP
+	@EM:EM__L__d1_r2__EN_L__d1_r3__EN_R__l3_tfpY4___R__l2_tfpY___TF__dY_dna_im_r4__CP() 37.189001 #EM__L__d1_r2__EN_L__d1_r3__EN_R__l3_tfpY4___R__l2_tfpY___TF__dY_dna_im_r4__CP
+	@EM:EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dY_dna_im_r5__CP() 1.1868766 #EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dY_dna_im_r5__CP
+	@PM:PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP() 0.027235471 #PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP
+	@PM:PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfpY3___TF__dpY_dna_im_r3__CP() 0.037522631 #PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfpY3___TF__dpY_dna_im_r3__CP
+	@PM:PM__R__l_tfpY1___TF__dpY_dna_im_r1__CP() 1.575948 #PM__R__l_tfpY1___TF__dpY_dna_im_r1__CP
+	@PM:PM__L__d_r1__EC_R__l1_tfpY2___TF__dpY_dna_im_r2__CP() 0.22310265 #PM__L__d_r1__EC_R__l1_tfpY2___TF__dpY_dna_im_r2__CP
+	@EM:EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP() 0.18625468 #EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP
+	@PM:PM__L__d1_r2__EC_L__d1_r3__EC_R__l3_tfpY4___R__l2_tfpY___TF__dpY_dna_im_r4__CP() 0.032509624 #PM__L__d1_r2__EC_L__d1_r3__EC_R__l3_tfpY4___R__l2_tfpY___TF__dpY_dna_im_r4__CP
+	@CP:CP__TF__dpY_dna_im_r__() 20.772995 #CP__TF__dpY_dna_im_r__
+	@PM:PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY4___R__l3_tfpY5___TF__dpY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP() 0.001166718 #PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY4___R__l3_tfpY5___TF__dpY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP
+	@PM:PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfpY4___TF__dpY_dna_im_r4__CP() 0.041213572 #PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfpY4___TF__dpY_dna_im_r4__CP
+	@EM:EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfpY3___TF__dpY_dna_im_r3__CP() 0.33386666 #EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfpY3___TF__dpY_dna_im_r3__CP
+	@EM:EM__R__l_tfpY1___TF__dpY_dna_im_r1__CP() 0.34646129 #EM__R__l_tfpY1___TF__dpY_dna_im_r1__CP
+	@EM:EM__L__d_r1__EN_R__l1_tfpY2___TF__dpY_dna_im_r2__CP() 0.34010398 #EM__L__d_r1__EN_R__l1_tfpY2___TF__dpY_dna_im_r2__CP
+	@EM:EM__L__d1_r2__EN_L__d1_r3__EN_R__l3_tfpY4___R__l2_tfpY___TF__dpY_dna_im_r4__CP() 0.2027929 #EM__L__d1_r2__EN_L__d1_r3__EN_R__l3_tfpY4___R__l2_tfpY___TF__dpY_dna_im_r4__CP
+	@EM:EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY4___R__l3_tfpY5___TF__dpY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP() 0.0080978028 #EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY4___R__l3_tfpY5___TF__dpY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP
+	@EM:EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfpY4___TF__dpY_dna_im_r4__CP() 0.099724687 #EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfpY4___TF__dpY_dna_im_r4__CP
+	@CP:CP__TF__dpY1_dna_im_r___TF__dpY1_dna_im_r__() 2.8445623 #CP__TF__dpY1_dna_im_r___TF__dpY1_dna_im_r__
+	@CP:CP__Im__cargo12_fg___TF__dpY3_dna_im1_r___TF__dpY3_dna_im2_r__() 0.31716619 #CP__Im__cargo12_fg___TF__dpY3_dna_im1_r___TF__dpY3_dna_im2_r__
+	@NM:NM__Im__cargo12_fg3__CP_NP__fg3___TF__dpY4_dna_im1_r__CP_TF__dpY4_dna_im2_r__CP() 0.4171285 #NM__Im__cargo12_fg3__CP_NP__fg3___TF__dpY4_dna_im1_r__CP_TF__dpY4_dna_im2_r__CP
+	@NM:NM__Im__cargo12_fg3__NU_NP__fg3___TF__dpY4_dna_im1_r__NU_TF__dpY4_dna_im2_r__NU() 0.11378168 #NM__Im__cargo12_fg3__NU_NP__fg3___TF__dpY4_dna_im1_r__NU_TF__dpY4_dna_im2_r__NU
+	@NU:NU__TF__dpY1_dna_im_r___TF__dpY1_dna_im_r__() 5.3470652 #NU__TF__dpY1_dna_im_r___TF__dpY1_dna_im_r__
+	@NU:NU__Im__cargo12_fg___TF__dpY3_dna_im1_r___TF__dpY3_dna_im2_r__() 0.028665893 #NU__Im__cargo12_fg___TF__dpY3_dna_im1_r___TF__dpY3_dna_im2_r__
+	@NU:NU__TF__dpY_dna_im_r__() 12.315797 #NU__TF__dpY_dna_im_r__
+	@NU:NU__DNA__p112_p2___TF__dpY3_dna1_im_r___TF__dpY3_dna2_im_r__() 0.35222176 #NU__DNA__p112_p2___TF__dpY3_dna1_im_r___TF__dpY3_dna2_im_r__
+	@NU:NU__mRNA1____() 0.17495252 #NU__mRNA1____
+	@CP:CP__mRNA1____() 0.17005445 #CP__mRNA1____
+	@CP:CP__P1__dna_im__() 0.68650194 #CP__P1__dna_im__
+	@CP:CP__Im__cargo1_fg___P1__dna_im1__() 0.055853489 #CP__Im__cargo1_fg___P1__dna_im1__
+	@NM:NM__Im__cargo1_fg2__CP_NP__fg2___P1__dna_im1__CP() 0.071967113 #NM__Im__cargo1_fg2__CP_NP__fg2___P1__dna_im1__CP
+	@NM:NM__Im__cargo1_fg2__NU_NP__fg2___P1__dna_im1__NU() 0.011442284 #NM__Im__cargo1_fg2__NU_NP__fg2___P1__dna_im1__NU
+	@NU:NU__P1__dna_im__() 0.37242795 #NU__P1__dna_im__
+	@NU:NU__Im__cargo1_fg___P1__dna_im1__() 0.0022411747 #NU__Im__cargo1_fg___P1__dna_im1__
+	@NU:NU__DNA__p1_p21___P1__dna1_im__() 0.011946047 #NU__DNA__p1_p21___P1__dna1_im__
+	@NU:NU__DNA__p112_p23___P1__dna3_im___TF__dpY4_dna1_im_r___TF__dpY4_dna2_im_r__() 0.0025762391 #NU__DNA__p112_p23___P1__dna3_im___TF__dpY4_dna1_im_r___TF__dpY4_dna2_im_r__
+	@NU:NU__mRNA2____() 0.0070377204 #NU__mRNA2____
+	@CP:CP__mRNA2____() 0.0065980903 #CP__mRNA2____
+	@CP:CP__P2____() 0.034891487 #CP__P2____
+end seed species
+begin observables
+	Species EC__L__d_r__ EC__L__d_r__() #@EC::L(d,r)
+	Species PM__R__l_tfY__ PM__R__l_tfY__() #@PM::R(l,tf~Y)
+	Species CP__TF__dY_dna_im_r__ CP__TF__dY_dna_im_r__() #@CP::TF(d~Y,dna,im,r)
+	Species NU__DNA__p1_p2__ NU__DNA__p1_p2__() #@NU::DNA(p1,p2)
+	Species CP__Im__cargo_fg__ CP__Im__cargo_fg__() #@CP::Im(cargo,fg)
+	Species NM__NP__fg__ NM__NP__fg__() #@NM::NP(fg)
+	Species CP__Sink____ CP__Sink____() #@CP::Sink()
+	Species PM__L__d_r1__EC_R__l1_tfY__ PM__L__d_r1__EC_R__l1_tfY__() #@PM::L(d,r!1)@EC.R(l!1,tf~Y)
+	Species EC__L__d1_r___L__d1_r__ EC__L__d1_r___L__d1_r__() #@EC::L(d!1,r).L(d!1,r)
+	Species NM__Im__cargo_fg1__CP_NP__fg1__ NM__Im__cargo_fg1__CP_NP__fg1__() #@NM::Im(cargo,fg!1)@CP.NP(fg!1)
+	Species PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfY__ PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfY__() #@PM::L(d!1,r!2)@EC.L(d!1,r)@EC.R(l!2,tf~Y)
+	Species PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfY__ PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfY__() #@PM::L(d!1,r!2)@EC.L(d!1,r!3)@EC.R(l!2,tf~Y).R(l!3,tf~Y)
+	Species NM__Im__cargo_fg1__NU_NP__fg1__ NM__Im__cargo_fg1__NU_NP__fg1__() #@NM::Im(cargo,fg!1)@NU.NP(fg!1)
+	Species EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfY__ EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfY__() #@EM::L(d!1,r!2)@EN.L(d!1,r!3)@EN.R(l!2,tf~Y).R(l!3,tf~Y)
+	Species PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfpY__ PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfpY__() #@PM::L(d!1,r!2)@EC.L(d!1,r!3)@EC.R(l!2,tf~Y).R(l!3,tf~pY)
+	Species NU__Im__cargo_fg__ NU__Im__cargo_fg__() #@NU::Im(cargo,fg)
+	Species EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfY__ EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfY__() #@EM::L(d!1,r!2)@EN.L(d!1,r)@EN.R(l!2,tf~Y)
+	Species EM__R__l_tfY__ EM__R__l_tfY__() #@EM::R(l,tf~Y)
+	Species PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfpY__ PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfpY__() #@PM::L(d!1,r!2)@EC.L(d!1,r)@EC.R(l!2,tf~pY)
+	Species PM__R__l_tfpY__ PM__R__l_tfpY__() #@PM::R(l,tf~pY)
+	Species EM__L__d_r1__EN_R__l1_tfY__ EM__L__d_r1__EN_R__l1_tfY__() #@EM::L(d,r!1)@EN.R(l!1,tf~Y)
+	Species PM__L__d_r1__EC_R__l1_tfpY__ PM__L__d_r1__EC_R__l1_tfpY__() #@PM::L(d,r!1)@EC.R(l!1,tf~pY)
+	Species EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfpY__ EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfpY__() #@EM::L(d!1,r!2)@EN.L(d!1,r!3)@EN.R(l!2,tf~Y).R(l!3,tf~pY)
+	Species PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY___R__l3_tfpY__ PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY___R__l3_tfpY__() #@PM::L(d!1,r!2)@EC.L(d!1,r!3)@EC.R(l!2,tf~pY).R(l!3,tf~pY)
+	Species PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfpY4___TF__dY_dna_im_r4__CP PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfpY4___TF__dY_dna_im_r4__CP() #@PM::L(d!1,r!2)@EC.L(d!1,r!3)@EC.R(l!2,tf~Y).R(l!3,tf~pY!4).TF(d~Y,dna,im,r!4)@CP
+	Species EN__L__d1_r___L__d1_r__ EN__L__d1_r___L__d1_r__() #@EN::L(d!1,r).L(d!1,r)
+	Species EN__L__d_r__ EN__L__d_r__() #@EN::L(d,r)
+	Species EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfpY__ EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfpY__() #@EM::L(d!1,r!2)@EN.L(d!1,r)@EN.R(l!2,tf~pY)
+	Species EM__R__l_tfpY__ EM__R__l_tfpY__() #@EM::R(l,tf~pY)
+	Species PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfpY3___TF__dY_dna_im_r3__CP PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfpY3___TF__dY_dna_im_r3__CP() #@PM::L(d!1,r!2)@EC.L(d!1,r)@EC.R(l!2,tf~pY!3).TF(d~Y,dna,im,r!3)@CP
+	Species PM__R__l_tfpY1___TF__dY_dna_im_r1__CP PM__R__l_tfpY1___TF__dY_dna_im_r1__CP() #@PM::R(l,tf~pY!1).TF(d~Y,dna,im,r!1)@CP
+	Species EM__L__d_r1__EN_R__l1_tfpY__ EM__L__d_r1__EN_R__l1_tfpY__() #@EM::L(d,r!1)@EN.R(l!1,tf~pY)
+	Species PM__L__d_r1__EC_R__l1_tfpY2___TF__dY_dna_im_r2__CP PM__L__d_r1__EC_R__l1_tfpY2___TF__dY_dna_im_r2__CP() #@PM::L(d,r!1)@EC.R(l!1,tf~pY!2).TF(d~Y,dna,im,r!2)@CP
+	Species EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY___R__l3_tfpY__ EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY___R__l3_tfpY__() #@EM::L(d!1,r!2)@EN.L(d!1,r!3)@EN.R(l!2,tf~pY).R(l!3,tf~pY)
+	Species EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfpY4___TF__dY_dna_im_r4__CP EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfpY4___TF__dY_dna_im_r4__CP() #@EM::L(d!1,r!2)@EN.L(d!1,r!3)@EN.R(l!2,tf~Y).R(l!3,tf~pY!4).TF(d~Y,dna,im,r!4)@CP
+	Species PM__L__d1_r2__EC_L__d1_r3__EC_R__l3_tfpY4___R__l2_tfpY___TF__dY_dna_im_r4__CP PM__L__d1_r2__EC_L__d1_r3__EC_R__l3_tfpY4___R__l2_tfpY___TF__dY_dna_im_r4__CP() #@PM::L(d!1,r!2)@EC.L(d!1,r!3)@EC.R(l!3,tf~pY!4).R(l!2,tf~pY).TF(d~Y,dna,im,r!4)@CP
+	Species PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dY_dna_im_r5__CP PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dY_dna_im_r5__CP() #@PM::L(d!1,r!2)@EC.L(d!1,r!3)@EC.R(l!2,tf~pY!4).R(l!3,tf~pY!5).TF(d~Y,dna,im,r!4)@CP.TF(d~Y,dna,im,r!5)@CP
+	Species EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfpY3___TF__dY_dna_im_r3__CP EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfpY3___TF__dY_dna_im_r3__CP() #@EM::L(d!1,r!2)@EN.L(d!1,r)@EN.R(l!2,tf~pY!3).TF(d~Y,dna,im,r!3)@CP
+	Species EM__R__l_tfpY1___TF__dY_dna_im_r1__CP EM__R__l_tfpY1___TF__dY_dna_im_r1__CP() #@EM::R(l,tf~pY!1).TF(d~Y,dna,im,r!1)@CP
+	Species EM__L__d_r1__EN_R__l1_tfpY2___TF__dY_dna_im_r2__CP EM__L__d_r1__EN_R__l1_tfpY2___TF__dY_dna_im_r2__CP() #@EM::L(d,r!1)@EN.R(l!1,tf~pY!2).TF(d~Y,dna,im,r!2)@CP
+	Species EM__L__d1_r2__EN_L__d1_r3__EN_R__l3_tfpY4___R__l2_tfpY___TF__dY_dna_im_r4__CP EM__L__d1_r2__EN_L__d1_r3__EN_R__l3_tfpY4___R__l2_tfpY___TF__dY_dna_im_r4__CP() #@EM::L(d!1,r!2)@EN.L(d!1,r!3)@EN.R(l!3,tf~pY!4).R(l!2,tf~pY).TF(d~Y,dna,im,r!4)@CP
+	Species EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dY_dna_im_r5__CP EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dY_dna_im_r5__CP() #@EM::L(d!1,r!2)@EN.L(d!1,r!3)@EN.R(l!2,tf~pY!4).R(l!3,tf~pY!5).TF(d~Y,dna,im,r!4)@CP.TF(d~Y,dna,im,r!5)@CP
+	Species PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP() #@PM::L(d!1,r!2)@EC.L(d!1,r!3)@EC.R(l!2,tf~pY!4).R(l!3,tf~pY!5).TF(d~Y,dna,im,r!4)@CP.TF(d~pY,dna,im,r!5)@CP
+	Species PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfpY3___TF__dpY_dna_im_r3__CP PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfpY3___TF__dpY_dna_im_r3__CP() #@PM::L(d!1,r!2)@EC.L(d!1,r)@EC.R(l!2,tf~pY!3).TF(d~pY,dna,im,r!3)@CP
+	Species PM__R__l_tfpY1___TF__dpY_dna_im_r1__CP PM__R__l_tfpY1___TF__dpY_dna_im_r1__CP() #@PM::R(l,tf~pY!1).TF(d~pY,dna,im,r!1)@CP
+	Species PM__L__d_r1__EC_R__l1_tfpY2___TF__dpY_dna_im_r2__CP PM__L__d_r1__EC_R__l1_tfpY2___TF__dpY_dna_im_r2__CP() #@PM::L(d,r!1)@EC.R(l!1,tf~pY!2).TF(d~pY,dna,im,r!2)@CP
+	Species EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP() #@EM::L(d!1,r!2)@EN.L(d!1,r!3)@EN.R(l!2,tf~pY!4).R(l!3,tf~pY!5).TF(d~Y,dna,im,r!4)@CP.TF(d~pY,dna,im,r!5)@CP
+	Species PM__L__d1_r2__EC_L__d1_r3__EC_R__l3_tfpY4___R__l2_tfpY___TF__dpY_dna_im_r4__CP PM__L__d1_r2__EC_L__d1_r3__EC_R__l3_tfpY4___R__l2_tfpY___TF__dpY_dna_im_r4__CP() #@PM::L(d!1,r!2)@EC.L(d!1,r!3)@EC.R(l!3,tf~pY!4).R(l!2,tf~pY).TF(d~pY,dna,im,r!4)@CP
+	Species CP__TF__dpY_dna_im_r__ CP__TF__dpY_dna_im_r__() #@CP::TF(d~pY,dna,im,r)
+	Species PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY4___R__l3_tfpY5___TF__dpY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY4___R__l3_tfpY5___TF__dpY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP() #@PM::L(d!1,r!2)@EC.L(d!1,r!3)@EC.R(l!2,tf~pY!4).R(l!3,tf~pY!5).TF(d~pY,dna,im,r!4)@CP.TF(d~pY,dna,im,r!5)@CP
+	Species PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfpY4___TF__dpY_dna_im_r4__CP PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfpY4___TF__dpY_dna_im_r4__CP() #@PM::L(d!1,r!2)@EC.L(d!1,r!3)@EC.R(l!2,tf~Y).R(l!3,tf~pY!4).TF(d~pY,dna,im,r!4)@CP
+	Species EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfpY3___TF__dpY_dna_im_r3__CP EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfpY3___TF__dpY_dna_im_r3__CP() #@EM::L(d!1,r!2)@EN.L(d!1,r)@EN.R(l!2,tf~pY!3).TF(d~pY,dna,im,r!3)@CP
+	Species EM__R__l_tfpY1___TF__dpY_dna_im_r1__CP EM__R__l_tfpY1___TF__dpY_dna_im_r1__CP() #@EM::R(l,tf~pY!1).TF(d~pY,dna,im,r!1)@CP
+	Species EM__L__d_r1__EN_R__l1_tfpY2___TF__dpY_dna_im_r2__CP EM__L__d_r1__EN_R__l1_tfpY2___TF__dpY_dna_im_r2__CP() #@EM::L(d,r!1)@EN.R(l!1,tf~pY!2).TF(d~pY,dna,im,r!2)@CP
+	Species EM__L__d1_r2__EN_L__d1_r3__EN_R__l3_tfpY4___R__l2_tfpY___TF__dpY_dna_im_r4__CP EM__L__d1_r2__EN_L__d1_r3__EN_R__l3_tfpY4___R__l2_tfpY___TF__dpY_dna_im_r4__CP() #@EM::L(d!1,r!2)@EN.L(d!1,r!3)@EN.R(l!3,tf~pY!4).R(l!2,tf~pY).TF(d~pY,dna,im,r!4)@CP
+	Species EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY4___R__l3_tfpY5___TF__dpY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY4___R__l3_tfpY5___TF__dpY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP() #@EM::L(d!1,r!2)@EN.L(d!1,r!3)@EN.R(l!2,tf~pY!4).R(l!3,tf~pY!5).TF(d~pY,dna,im,r!4)@CP.TF(d~pY,dna,im,r!5)@CP
+	Species EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfpY4___TF__dpY_dna_im_r4__CP EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfpY4___TF__dpY_dna_im_r4__CP() #@EM::L(d!1,r!2)@EN.L(d!1,r!3)@EN.R(l!2,tf~Y).R(l!3,tf~pY!4).TF(d~pY,dna,im,r!4)@CP
+	Species CP__TF__dpY1_dna_im_r___TF__dpY1_dna_im_r__ CP__TF__dpY1_dna_im_r___TF__dpY1_dna_im_r__() #@CP::TF(d~pY!1,dna,im,r).TF(d~pY!1,dna,im,r)
+	Species CP__Im__cargo12_fg___TF__dpY3_dna_im1_r___TF__dpY3_dna_im2_r__ CP__Im__cargo12_fg___TF__dpY3_dna_im1_r___TF__dpY3_dna_im2_r__() #@CP::Im(cargo!1!2,fg).TF(d~pY!3,dna,im!1,r).TF(d~pY!3,dna,im!2,r)
+	Species NM__Im__cargo12_fg3__CP_NP__fg3___TF__dpY4_dna_im1_r__CP_TF__dpY4_dna_im2_r__CP NM__Im__cargo12_fg3__CP_NP__fg3___TF__dpY4_dna_im1_r__CP_TF__dpY4_dna_im2_r__CP() #@NM::Im(cargo!1!2,fg!3)@CP.NP(fg!3).TF(d~pY!4,dna,im!1,r)@CP.TF(d~pY!4,dna,im!2,r)@CP
+	Species NM__Im__cargo12_fg3__NU_NP__fg3___TF__dpY4_dna_im1_r__NU_TF__dpY4_dna_im2_r__NU NM__Im__cargo12_fg3__NU_NP__fg3___TF__dpY4_dna_im1_r__NU_TF__dpY4_dna_im2_r__NU() #@NM::Im(cargo!1!2,fg!3)@NU.NP(fg!3).TF(d~pY!4,dna,im!1,r)@NU.TF(d~pY!4,dna,im!2,r)@NU
+	Species NU__TF__dpY1_dna_im_r___TF__dpY1_dna_im_r__ NU__TF__dpY1_dna_im_r___TF__dpY1_dna_im_r__() #@NU::TF(d~pY!1,dna,im,r).TF(d~pY!1,dna,im,r)
+	Species NU__Im__cargo12_fg___TF__dpY3_dna_im1_r___TF__dpY3_dna_im2_r__ NU__Im__cargo12_fg___TF__dpY3_dna_im1_r___TF__dpY3_dna_im2_r__() #@NU::Im(cargo!1!2,fg).TF(d~pY!3,dna,im!1,r).TF(d~pY!3,dna,im!2,r)
+	Species NU__TF__dpY_dna_im_r__ NU__TF__dpY_dna_im_r__() #@NU::TF(d~pY,dna,im,r)
+	Species NU__DNA__p112_p2___TF__dpY3_dna1_im_r___TF__dpY3_dna2_im_r__ NU__DNA__p112_p2___TF__dpY3_dna1_im_r___TF__dpY3_dna2_im_r__() #@NU::DNA(p1!1!2,p2).TF(d~pY!3,dna!1,im,r).TF(d~pY!3,dna!2,im,r)
+	Species NU__mRNA1____ NU__mRNA1____() #@NU::mRNA1()
+	Species CP__mRNA1____ CP__mRNA1____() #@CP::mRNA1()
+	Species CP__P1__dna_im__ CP__P1__dna_im__() #@CP::P1(dna,im)
+	Species CP__Im__cargo1_fg___P1__dna_im1__ CP__Im__cargo1_fg___P1__dna_im1__() #@CP::Im(cargo!1,fg).P1(dna,im!1)
+	Species NM__Im__cargo1_fg2__CP_NP__fg2___P1__dna_im1__CP NM__Im__cargo1_fg2__CP_NP__fg2___P1__dna_im1__CP() #@NM::Im(cargo!1,fg!2)@CP.NP(fg!2).P1(dna,im!1)@CP
+	Species NM__Im__cargo1_fg2__NU_NP__fg2___P1__dna_im1__NU NM__Im__cargo1_fg2__NU_NP__fg2___P1__dna_im1__NU() #@NM::Im(cargo!1,fg!2)@NU.NP(fg!2).P1(dna,im!1)@NU
+	Species NU__P1__dna_im__ NU__P1__dna_im__() #@NU::P1(dna,im)
+	Species NU__Im__cargo1_fg___P1__dna_im1__ NU__Im__cargo1_fg___P1__dna_im1__() #@NU::Im(cargo!1,fg).P1(dna,im!1)
+	Species NU__DNA__p1_p21___P1__dna1_im__ NU__DNA__p1_p21___P1__dna1_im__() #@NU::DNA(p1,p2!1).P1(dna!1,im)
+	Species NU__DNA__p112_p23___P1__dna3_im___TF__dpY4_dna1_im_r___TF__dpY4_dna2_im_r__ NU__DNA__p112_p23___P1__dna3_im___TF__dpY4_dna1_im_r___TF__dpY4_dna2_im_r__() #@NU::DNA(p1!1!2,p2!3).P1(dna!3,im).TF(d~pY!4,dna!1,im,r).TF(d~pY!4,dna!2,im,r)
+	Species NU__mRNA2____ NU__mRNA2____() #@NU::mRNA2()
+	Species CP__mRNA2____ CP__mRNA2____() #@CP::mRNA2()
+	Species CP__P2____ CP__P2____() #@CP::P2()
+end observables
+begin functions
+	functionRate1() = 0.5 * kp_LL*2
+	functionRate3() = 2 * kp_LR
+	functionRate6() = 0.5 * kp_LL*2
+	functionRate12() = 2 * km_LR
+	functionRate16() = 2 * k_R_transphos
+	functionRate19() = 2 * km_LR
+	functionRate26() = 2 * k_R_transphos
+	functionRate32() = 2 * kp_LR
+	functionRate43() = 2 * km_LR
+	functionRate48() = 0.5 * kp_LL*2
+	functionRate49() = 0.5 * kp_LL*2
+	functionRate67() = 2 * k_R_dephos
+	functionRate72() = 2 * kp_R_TF
+	functionRate75() = 2 * kp_LR
+	functionRate79() = 2 * kp_LR
+	functionRate80() = 2 * kp_LR
+	functionRate92() = 2 * km_LR
+	functionRate102() = 0.5 * kp_LL*2
+	functionRate104() = 0.5 * kp_LL*2
+	functionRate105() = 0.5 * kp_LL*2
+	functionRate124() = 2 * k_R_dephos
+	functionRate129() = 2 * kp_R_TF
+	functionRate137() = 2 * kp_LR
+	functionRate143() = 2 * km_LR
+	functionRate151() = 0.5 * kp_LL*2
+	functionRate162() = 2 * km_R_TF
+	functionRate167() = 2 * k_TF_transphos
+	functionRate168() = 2 * km_LR
+	functionRate175() = 2 * km_R_TF
+	functionRate178() = 2 * k_TF_transphos
+	functionRate182() = 2 * kp_LR
+	functionRate196() = 2 * km_LR
+	functionRate201() = 0.5 * kp_LL*2
+	functionRate217() = 2 * kp_R_TFp
+	functionRate221() = 2 * kp_R_TFp
+	functionRate230() = 2 * km_R_TFp
+	functionRate238() = 2 * k_TF_dephos
+	functionRate239() = 0.5 * kp_TF_TF*2
+	functionRate241() = 2 * kp_LR
+	functionRate255() = 2 * km_LR
+	functionRate262() = 0.5 * kp_LL*2
+	functionRate285() = 2 * km_R_TFp
+	functionRate292() = 2 * k_TF_dephos
+	functionRate311() = 0.5 * kp_TF_TF*2
+	Tot_Im() = CP__Im__cargo_fg__ + NM__Im__cargo_fg1__CP_NP__fg1__ + NM__Im__cargo_fg1__NU_NP__fg1__ + NU__Im__cargo_fg__ + CP__Im__cargo12_fg___TF__dpY3_dna_im1_r___TF__dpY3_dna_im2_r__ + NM__Im__cargo12_fg3__CP_NP__fg3___TF__dpY4_dna_im1_r__CP_TF__dpY4_dna_im2_r__CP + NM__Im__cargo12_fg3__NU_NP__fg3___TF__dpY4_dna_im1_r__NU_TF__dpY4_dna_im2_r__NU + NU__Im__cargo12_fg___TF__dpY3_dna_im1_r___TF__dpY3_dna_im2_r__ + CP__Im__cargo1_fg___P1__dna_im1__ + NM__Im__cargo1_fg2__CP_NP__fg2___P1__dna_im1__CP + NM__Im__cargo1_fg2__NU_NP__fg2___P1__dna_im1__NU + NU__Im__cargo1_fg___P1__dna_im1__
+	R_Dimers_PM() = PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfY__ + PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfpY__ + PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY___R__l3_tfpY__ + PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfpY4___TF__dY_dna_im_r4__CP + PM__L__d1_r2__EC_L__d1_r3__EC_R__l3_tfpY4___R__l2_tfpY___TF__dY_dna_im_r4__CP + PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dY_dna_im_r5__CP + PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP + PM__L__d1_r2__EC_L__d1_r3__EC_R__l3_tfpY4___R__l2_tfpY___TF__dpY_dna_im_r4__CP + PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY4___R__l3_tfpY5___TF__dpY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP + PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfpY4___TF__dpY_dna_im_r4__CP
+	Phos_TF_CP() = PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP + PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfpY3___TF__dpY_dna_im_r3__CP + PM__R__l_tfpY1___TF__dpY_dna_im_r1__CP + PM__L__d_r1__EC_R__l1_tfpY2___TF__dpY_dna_im_r2__CP + EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP + PM__L__d1_r2__EC_L__d1_r3__EC_R__l3_tfpY4___R__l2_tfpY___TF__dpY_dna_im_r4__CP + CP__TF__dpY_dna_im_r__ + 2 * PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY4___R__l3_tfpY5___TF__dpY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP + PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfpY4___TF__dpY_dna_im_r4__CP + EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfpY3___TF__dpY_dna_im_r3__CP + EM__R__l_tfpY1___TF__dpY_dna_im_r1__CP + EM__L__d_r1__EN_R__l1_tfpY2___TF__dpY_dna_im_r2__CP + EM__L__d1_r2__EN_L__d1_r3__EN_R__l3_tfpY4___R__l2_tfpY___TF__dpY_dna_im_r4__CP + 2 * EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY4___R__l3_tfpY5___TF__dpY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP + EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfpY4___TF__dpY_dna_im_r4__CP + 2 * CP__TF__dpY1_dna_im_r___TF__dpY1_dna_im_r__ + 2 * CP__Im__cargo12_fg___TF__dpY3_dna_im1_r___TF__dpY3_dna_im2_r__ + 2 * NM__Im__cargo12_fg3__CP_NP__fg3___TF__dpY4_dna_im1_r__CP_TF__dpY4_dna_im2_r__CP
+	Bound_prom2() = NU__DNA__p1_p21___P1__dna1_im__ + NU__DNA__p112_p23___P1__dna3_im___TF__dpY4_dna1_im_r___TF__dpY4_dna2_im_r__
+	Phos_TF() = PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP + PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfpY3___TF__dpY_dna_im_r3__CP + PM__R__l_tfpY1___TF__dpY_dna_im_r1__CP + PM__L__d_r1__EC_R__l1_tfpY2___TF__dpY_dna_im_r2__CP + EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP + PM__L__d1_r2__EC_L__d1_r3__EC_R__l3_tfpY4___R__l2_tfpY___TF__dpY_dna_im_r4__CP + CP__TF__dpY_dna_im_r__ + 2 * PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY4___R__l3_tfpY5___TF__dpY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP + PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfpY4___TF__dpY_dna_im_r4__CP + EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfpY3___TF__dpY_dna_im_r3__CP + EM__R__l_tfpY1___TF__dpY_dna_im_r1__CP + EM__L__d_r1__EN_R__l1_tfpY2___TF__dpY_dna_im_r2__CP + EM__L__d1_r2__EN_L__d1_r3__EN_R__l3_tfpY4___R__l2_tfpY___TF__dpY_dna_im_r4__CP + 2 * EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY4___R__l3_tfpY5___TF__dpY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP + EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfpY4___TF__dpY_dna_im_r4__CP + 2 * CP__TF__dpY1_dna_im_r___TF__dpY1_dna_im_r__ + 2 * CP__Im__cargo12_fg___TF__dpY3_dna_im1_r___TF__dpY3_dna_im2_r__ + 2 * NM__Im__cargo12_fg3__CP_NP__fg3___TF__dpY4_dna_im1_r__CP_TF__dpY4_dna_im2_r__CP + 2 * NM__Im__cargo12_fg3__NU_NP__fg3___TF__dpY4_dna_im1_r__NU_TF__dpY4_dna_im2_r__NU + 2 * NU__TF__dpY1_dna_im_r___TF__dpY1_dna_im_r__ + 2 * NU__Im__cargo12_fg___TF__dpY3_dna_im1_r___TF__dpY3_dna_im2_r__ + NU__TF__dpY_dna_im_r__ + 2 * NU__DNA__p112_p2___TF__dpY3_dna1_im_r___TF__dpY3_dna2_im_r__ + 2 * NU__DNA__p112_p23___P1__dna3_im___TF__dpY4_dna1_im_r___TF__dpY4_dna2_im_r__
+	Catalytic_TF() = PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfpY4___TF__dY_dna_im_r4__CP + PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfpY3___TF__dY_dna_im_r3__CP + PM__R__l_tfpY1___TF__dY_dna_im_r1__CP + PM__L__d_r1__EC_R__l1_tfpY2___TF__dY_dna_im_r2__CP + EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfpY4___TF__dY_dna_im_r4__CP + PM__L__d1_r2__EC_L__d1_r3__EC_R__l3_tfpY4___R__l2_tfpY___TF__dY_dna_im_r4__CP + 2 * PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dY_dna_im_r5__CP + EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfpY3___TF__dY_dna_im_r3__CP + EM__R__l_tfpY1___TF__dY_dna_im_r1__CP + EM__L__d_r1__EN_R__l1_tfpY2___TF__dY_dna_im_r2__CP + EM__L__d1_r2__EN_L__d1_r3__EN_R__l3_tfpY4___R__l2_tfpY___TF__dY_dna_im_r4__CP + 2 * EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dY_dna_im_r5__CP + 2 * PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP + PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfpY3___TF__dpY_dna_im_r3__CP + PM__R__l_tfpY1___TF__dpY_dna_im_r1__CP + PM__L__d_r1__EC_R__l1_tfpY2___TF__dpY_dna_im_r2__CP + 2 * EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP + PM__L__d1_r2__EC_L__d1_r3__EC_R__l3_tfpY4___R__l2_tfpY___TF__dpY_dna_im_r4__CP + 2 * PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY4___R__l3_tfpY5___TF__dpY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP + PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfpY4___TF__dpY_dna_im_r4__CP + EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfpY3___TF__dpY_dna_im_r3__CP + EM__R__l_tfpY1___TF__dpY_dna_im_r1__CP + EM__L__d_r1__EN_R__l1_tfpY2___TF__dpY_dna_im_r2__CP + EM__L__d1_r2__EN_L__d1_r3__EN_R__l3_tfpY4___R__l2_tfpY___TF__dpY_dna_im_r4__CP + 2 * EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY4___R__l3_tfpY5___TF__dpY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP + EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfpY4___TF__dpY_dna_im_r4__CP
+	CountSink() = 0 + CP__Sink____
+	L_Dimers_PM() = PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfY__ + PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfY__ + PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfpY__ + PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfpY__ + PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY___R__l3_tfpY__ + PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfpY4___TF__dY_dna_im_r4__CP + PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfpY3___TF__dY_dna_im_r3__CP + PM__L__d1_r2__EC_L__d1_r3__EC_R__l3_tfpY4___R__l2_tfpY___TF__dY_dna_im_r4__CP + PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dY_dna_im_r5__CP + PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP + PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfpY3___TF__dpY_dna_im_r3__CP + PM__L__d1_r2__EC_L__d1_r3__EC_R__l3_tfpY4___R__l2_tfpY___TF__dpY_dna_im_r4__CP + PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY4___R__l3_tfpY5___TF__dpY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP + PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfpY4___TF__dpY_dna_im_r4__CP
+	R_Dimers_EM() = EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfY__ + EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfpY__ + EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY___R__l3_tfpY__ + EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfpY4___TF__dY_dna_im_r4__CP + EM__L__d1_r2__EN_L__d1_r3__EN_R__l3_tfpY4___R__l2_tfpY___TF__dY_dna_im_r4__CP + EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dY_dna_im_r5__CP + EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP + EM__L__d1_r2__EN_L__d1_r3__EN_R__l3_tfpY4___R__l2_tfpY___TF__dpY_dna_im_r4__CP + EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY4___R__l3_tfpY5___TF__dpY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP + EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfpY4___TF__dpY_dna_im_r4__CP
+	Tot_TF() = CP__TF__dY_dna_im_r__ + PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfpY4___TF__dY_dna_im_r4__CP + PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfpY3___TF__dY_dna_im_r3__CP + PM__R__l_tfpY1___TF__dY_dna_im_r1__CP + PM__L__d_r1__EC_R__l1_tfpY2___TF__dY_dna_im_r2__CP + EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfpY4___TF__dY_dna_im_r4__CP + PM__L__d1_r2__EC_L__d1_r3__EC_R__l3_tfpY4___R__l2_tfpY___TF__dY_dna_im_r4__CP + 2 * PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dY_dna_im_r5__CP + EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfpY3___TF__dY_dna_im_r3__CP + EM__R__l_tfpY1___TF__dY_dna_im_r1__CP + EM__L__d_r1__EN_R__l1_tfpY2___TF__dY_dna_im_r2__CP + EM__L__d1_r2__EN_L__d1_r3__EN_R__l3_tfpY4___R__l2_tfpY___TF__dY_dna_im_r4__CP + 2 * EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dY_dna_im_r5__CP + 2 * PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP + PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfpY3___TF__dpY_dna_im_r3__CP + PM__R__l_tfpY1___TF__dpY_dna_im_r1__CP + PM__L__d_r1__EC_R__l1_tfpY2___TF__dpY_dna_im_r2__CP + 2 * EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP + PM__L__d1_r2__EC_L__d1_r3__EC_R__l3_tfpY4___R__l2_tfpY___TF__dpY_dna_im_r4__CP + CP__TF__dpY_dna_im_r__ + 2 * PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY4___R__l3_tfpY5___TF__dpY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP + PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfpY4___TF__dpY_dna_im_r4__CP + EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfpY3___TF__dpY_dna_im_r3__CP + EM__R__l_tfpY1___TF__dpY_dna_im_r1__CP + EM__L__d_r1__EN_R__l1_tfpY2___TF__dpY_dna_im_r2__CP + EM__L__d1_r2__EN_L__d1_r3__EN_R__l3_tfpY4___R__l2_tfpY___TF__dpY_dna_im_r4__CP + 2 * EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY4___R__l3_tfpY5___TF__dpY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP + EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfpY4___TF__dpY_dna_im_r4__CP + 2 * CP__TF__dpY1_dna_im_r___TF__dpY1_dna_im_r__ + 2 * CP__Im__cargo12_fg___TF__dpY3_dna_im1_r___TF__dpY3_dna_im2_r__ + 2 * NM__Im__cargo12_fg3__CP_NP__fg3___TF__dpY4_dna_im1_r__CP_TF__dpY4_dna_im2_r__CP + 2 * NM__Im__cargo12_fg3__NU_NP__fg3___TF__dpY4_dna_im1_r__NU_TF__dpY4_dna_im2_r__NU + 2 * NU__TF__dpY1_dna_im_r___TF__dpY1_dna_im_r__ + 2 * NU__Im__cargo12_fg___TF__dpY3_dna_im1_r___TF__dpY3_dna_im2_r__ + NU__TF__dpY_dna_im_r__ + 2 * NU__DNA__p112_p2___TF__dpY3_dna1_im_r___TF__dpY3_dna2_im_r__ + 2 * NU__DNA__p112_p23___P1__dna3_im___TF__dpY4_dna1_im_r___TF__dpY4_dna2_im_r__
+	L_Bound_EM() = 2 * EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfY__ + 2 * EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfY__ + EM__L__d_r1__EN_R__l1_tfY__ + 2 * EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfpY__ + 2 * EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfpY__ + EM__L__d_r1__EN_R__l1_tfpY__ + 2 * EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY___R__l3_tfpY__ + 2 * EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfpY4___TF__dY_dna_im_r4__CP + 2 * EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfpY3___TF__dY_dna_im_r3__CP + EM__L__d_r1__EN_R__l1_tfpY2___TF__dY_dna_im_r2__CP + 2 * EM__L__d1_r2__EN_L__d1_r3__EN_R__l3_tfpY4___R__l2_tfpY___TF__dY_dna_im_r4__CP + 2 * EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dY_dna_im_r5__CP + 2 * EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP + 2 * EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfpY3___TF__dpY_dna_im_r3__CP + EM__L__d_r1__EN_R__l1_tfpY2___TF__dpY_dna_im_r2__CP + 2 * EM__L__d1_r2__EN_L__d1_r3__EN_R__l3_tfpY4___R__l2_tfpY___TF__dpY_dna_im_r4__CP + 2 * EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY4___R__l3_tfpY5___TF__dpY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP + 2 * EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfpY4___TF__dpY_dna_im_r4__CP
+	TF_Dimer_CP() = CP__TF__dpY1_dna_im_r___TF__dpY1_dna_im_r__ + CP__Im__cargo12_fg___TF__dpY3_dna_im1_r___TF__dpY3_dna_im2_r__ + NM__Im__cargo12_fg3__CP_NP__fg3___TF__dpY4_dna_im1_r__CP_TF__dpY4_dna_im2_r__CP
+	Im_NU() = NM__Im__cargo_fg1__NU_NP__fg1__ + NU__Im__cargo_fg__ + NM__Im__cargo12_fg3__NU_NP__fg3___TF__dpY4_dna_im1_r__NU_TF__dpY4_dna_im2_r__NU + NU__Im__cargo12_fg___TF__dpY3_dna_im1_r___TF__dpY3_dna_im2_r__ + NM__Im__cargo1_fg2__NU_NP__fg2___P1__dna_im1__NU + NU__Im__cargo1_fg___P1__dna_im1__
+	L_Dimers_EM() = EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfY__ + EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfY__ + EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfpY__ + EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfpY__ + EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY___R__l3_tfpY__ + EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfpY4___TF__dY_dna_im_r4__CP + EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfpY3___TF__dY_dna_im_r3__CP + EM__L__d1_r2__EN_L__d1_r3__EN_R__l3_tfpY4___R__l2_tfpY___TF__dY_dna_im_r4__CP + EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dY_dna_im_r5__CP + EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP + EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfpY3___TF__dpY_dna_im_r3__CP + EM__L__d1_r2__EN_L__d1_r3__EN_R__l3_tfpY4___R__l2_tfpY___TF__dpY_dna_im_r4__CP + EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY4___R__l3_tfpY5___TF__dpY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP + EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfpY4___TF__dpY_dna_im_r4__CP
+	L_Dimers_EN() = 0 + EN__L__d1_r___L__d1_r__
+	L_Bound_PM() = PM__L__d_r1__EC_R__l1_tfY__ + 2 * PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfY__ + 2 * PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfY__ + 2 * PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfpY__ + 2 * PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfpY__ + PM__L__d_r1__EC_R__l1_tfpY__ + 2 * PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY___R__l3_tfpY__ + 2 * PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfpY4___TF__dY_dna_im_r4__CP + 2 * PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfpY3___TF__dY_dna_im_r3__CP + PM__L__d_r1__EC_R__l1_tfpY2___TF__dY_dna_im_r2__CP + 2 * PM__L__d1_r2__EC_L__d1_r3__EC_R__l3_tfpY4___R__l2_tfpY___TF__dY_dna_im_r4__CP + 2 * PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dY_dna_im_r5__CP + 2 * PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP + 2 * PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfpY3___TF__dpY_dna_im_r3__CP + PM__L__d_r1__EC_R__l1_tfpY2___TF__dpY_dna_im_r2__CP + 2 * PM__L__d1_r2__EC_L__d1_r3__EC_R__l3_tfpY4___R__l2_tfpY___TF__dpY_dna_im_r4__CP + 2 * PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY4___R__l3_tfpY5___TF__dpY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP + 2 * PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfpY4___TF__dpY_dna_im_r4__CP
+	Im_CP() = CP__Im__cargo_fg__ + NM__Im__cargo_fg1__CP_NP__fg1__ + CP__Im__cargo12_fg___TF__dpY3_dna_im1_r___TF__dpY3_dna_im2_r__ + NM__Im__cargo12_fg3__CP_NP__fg3___TF__dpY4_dna_im1_r__CP_TF__dpY4_dna_im2_r__CP + CP__Im__cargo1_fg___P1__dna_im1__ + NM__Im__cargo1_fg2__CP_NP__fg2___P1__dna_im1__CP
+	L_Dimers_EC() = 0 + EC__L__d1_r___L__d1_r__
+	Tot_DNA() = NU__DNA__p1_p2__ + NU__DNA__p112_p2___TF__dpY3_dna1_im_r___TF__dpY3_dna2_im_r__ + NU__DNA__p1_p21___P1__dna1_im__ + NU__DNA__p112_p23___P1__dna3_im___TF__dpY4_dna1_im_r___TF__dpY4_dna2_im_r__
+	P1_NU_dna() = NU__DNA__p1_p21___P1__dna1_im__ + NU__DNA__p112_p23___P1__dna3_im___TF__dpY4_dna1_im_r___TF__dpY4_dna2_im_r__
+	P1_NU_free() = 0 + NU__P1__dna_im__
+	Im_Cargo_NP() = NM__Im__cargo12_fg3__CP_NP__fg3___TF__dpY4_dna_im1_r__CP_TF__dpY4_dna_im2_r__CP + NM__Im__cargo12_fg3__NU_NP__fg3___TF__dpY4_dna_im1_r__NU_TF__dpY4_dna_im2_r__NU + NM__Im__cargo1_fg2__CP_NP__fg2___P1__dna_im1__CP + NM__Im__cargo1_fg2__NU_NP__fg2___P1__dna_im1__NU
+	Tot_P2() = 0 + CP__P2____
+	P1_NU() = NM__Im__cargo1_fg2__NU_NP__fg2___P1__dna_im1__NU + NU__P1__dna_im__ + NU__Im__cargo1_fg___P1__dna_im1__ + NU__DNA__p1_p21___P1__dna1_im__ + NU__DNA__p112_p23___P1__dna3_im___TF__dpY4_dna1_im_r___TF__dpY4_dna2_im_r__
+	Tot_P1() = CP__P1__dna_im__ + CP__Im__cargo1_fg___P1__dna_im1__ + NM__Im__cargo1_fg2__CP_NP__fg2___P1__dna_im1__CP + NM__Im__cargo1_fg2__NU_NP__fg2___P1__dna_im1__NU + NU__P1__dna_im__ + NU__Im__cargo1_fg___P1__dna_im1__ + NU__DNA__p1_p21___P1__dna1_im__ + NU__DNA__p112_p23___P1__dna3_im___TF__dpY4_dna1_im_r___TF__dpY4_dna2_im_r__
+	Tot_L() = EC__L__d_r__ + PM__L__d_r1__EC_R__l1_tfY__ + 2 * EC__L__d1_r___L__d1_r__ + 2 * PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfY__ + 2 * PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfY__ + 2 * EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfY__ + 2 * PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfpY__ + 2 * EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfY__ + 2 * PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfpY__ + EM__L__d_r1__EN_R__l1_tfY__ + PM__L__d_r1__EC_R__l1_tfpY__ + 2 * EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfpY__ + 2 * PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY___R__l3_tfpY__ + 2 * PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfpY4___TF__dY_dna_im_r4__CP + 2 * EN__L__d1_r___L__d1_r__ + EN__L__d_r__ + 2 * EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfpY__ + 2 * PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfpY3___TF__dY_dna_im_r3__CP + EM__L__d_r1__EN_R__l1_tfpY__ + PM__L__d_r1__EC_R__l1_tfpY2___TF__dY_dna_im_r2__CP + 2 * EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY___R__l3_tfpY__ + 2 * EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfpY4___TF__dY_dna_im_r4__CP + 2 * PM__L__d1_r2__EC_L__d1_r3__EC_R__l3_tfpY4___R__l2_tfpY___TF__dY_dna_im_r4__CP + 2 * PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dY_dna_im_r5__CP + 2 * EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfpY3___TF__dY_dna_im_r3__CP + EM__L__d_r1__EN_R__l1_tfpY2___TF__dY_dna_im_r2__CP + 2 * EM__L__d1_r2__EN_L__d1_r3__EN_R__l3_tfpY4___R__l2_tfpY___TF__dY_dna_im_r4__CP + 2 * EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dY_dna_im_r5__CP + 2 * PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP + 2 * PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfpY3___TF__dpY_dna_im_r3__CP + PM__L__d_r1__EC_R__l1_tfpY2___TF__dpY_dna_im_r2__CP + 2 * EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP + 2 * PM__L__d1_r2__EC_L__d1_r3__EC_R__l3_tfpY4___R__l2_tfpY___TF__dpY_dna_im_r4__CP + 2 * PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY4___R__l3_tfpY5___TF__dpY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP + 2 * PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfpY4___TF__dpY_dna_im_r4__CP + 2 * EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfpY3___TF__dpY_dna_im_r3__CP + EM__L__d_r1__EN_R__l1_tfpY2___TF__dpY_dna_im_r2__CP + 2 * EM__L__d1_r2__EN_L__d1_r3__EN_R__l3_tfpY4___R__l2_tfpY___TF__dpY_dna_im_r4__CP + 2 * EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY4___R__l3_tfpY5___TF__dpY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP + 2 * EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfpY4___TF__dpY_dna_im_r4__CP
+	Tot_NP() = NM__NP__fg__ + NM__Im__cargo_fg1__CP_NP__fg1__ + NM__Im__cargo_fg1__NU_NP__fg1__ + NM__Im__cargo12_fg3__CP_NP__fg3___TF__dpY4_dna_im1_r__CP_TF__dpY4_dna_im2_r__CP + NM__Im__cargo12_fg3__NU_NP__fg3___TF__dpY4_dna_im1_r__NU_TF__dpY4_dna_im2_r__NU + NM__Im__cargo1_fg2__CP_NP__fg2___P1__dna_im1__CP + NM__Im__cargo1_fg2__NU_NP__fg2___P1__dna_im1__NU
+	Tot_mRNA2() = NU__mRNA2____ + CP__mRNA2____
+	Tot_mRNA1() = NU__mRNA1____ + CP__mRNA1____
+	Catalytic_R() = PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfpY__ + PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfpY__ + PM__R__l_tfpY__ + PM__L__d_r1__EC_R__l1_tfpY__ + EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfpY__ + 2 * PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY___R__l3_tfpY__ + PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfpY4___TF__dY_dna_im_r4__CP + EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfpY__ + EM__R__l_tfpY__ + PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfpY3___TF__dY_dna_im_r3__CP + PM__R__l_tfpY1___TF__dY_dna_im_r1__CP + EM__L__d_r1__EN_R__l1_tfpY__ + PM__L__d_r1__EC_R__l1_tfpY2___TF__dY_dna_im_r2__CP + 2 * EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY___R__l3_tfpY__ + EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfpY4___TF__dY_dna_im_r4__CP + 2 * PM__L__d1_r2__EC_L__d1_r3__EC_R__l3_tfpY4___R__l2_tfpY___TF__dY_dna_im_r4__CP + 2 * PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dY_dna_im_r5__CP + EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfpY3___TF__dY_dna_im_r3__CP + EM__R__l_tfpY1___TF__dY_dna_im_r1__CP + EM__L__d_r1__EN_R__l1_tfpY2___TF__dY_dna_im_r2__CP + 2 * EM__L__d1_r2__EN_L__d1_r3__EN_R__l3_tfpY4___R__l2_tfpY___TF__dY_dna_im_r4__CP + 2 * EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dY_dna_im_r5__CP + 2 * PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP + PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfpY3___TF__dpY_dna_im_r3__CP + PM__R__l_tfpY1___TF__dpY_dna_im_r1__CP + PM__L__d_r1__EC_R__l1_tfpY2___TF__dpY_dna_im_r2__CP + 2 * EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP + 2 * PM__L__d1_r2__EC_L__d1_r3__EC_R__l3_tfpY4___R__l2_tfpY___TF__dpY_dna_im_r4__CP + 2 * PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY4___R__l3_tfpY5___TF__dpY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP + PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfpY4___TF__dpY_dna_im_r4__CP + EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfpY3___TF__dpY_dna_im_r3__CP + EM__R__l_tfpY1___TF__dpY_dna_im_r1__CP + EM__L__d_r1__EN_R__l1_tfpY2___TF__dpY_dna_im_r2__CP + 2 * EM__L__d1_r2__EN_L__d1_r3__EN_R__l3_tfpY4___R__l2_tfpY___TF__dpY_dna_im_r4__CP + 2 * EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY4___R__l3_tfpY5___TF__dpY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP + EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfpY4___TF__dpY_dna_im_r4__CP
+	P1_CP() = CP__P1__dna_im__ + CP__Im__cargo1_fg___P1__dna_im1__ + NM__Im__cargo1_fg2__CP_NP__fg2___P1__dna_im1__CP
+	TF_Dimer_NU() = NM__Im__cargo12_fg3__NU_NP__fg3___TF__dpY4_dna_im1_r__NU_TF__dpY4_dna_im2_r__NU + NU__TF__dpY1_dna_im_r___TF__dpY1_dna_im_r__ + NU__Im__cargo12_fg___TF__dpY3_dna_im1_r___TF__dpY3_dna_im2_r__ + NU__DNA__p112_p2___TF__dpY3_dna1_im_r___TF__dpY3_dna2_im_r__ + NU__DNA__p112_p23___P1__dna3_im___TF__dpY4_dna1_im_r___TF__dpY4_dna2_im_r__
+	Bound_prom1() = NU__DNA__p112_p2___TF__dpY3_dna1_im_r___TF__dpY3_dna2_im_r__ + NU__DNA__p112_p23___P1__dna3_im___TF__dpY4_dna1_im_r___TF__dpY4_dna2_im_r__
+	Tot_R() = PM__R__l_tfY__ + PM__L__d_r1__EC_R__l1_tfY__ + PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfY__ + 2 * PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfY__ + 2 * EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfY__ + 2 * PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfpY__ + EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfY__ + EM__R__l_tfY__ + PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfpY__ + PM__R__l_tfpY__ + EM__L__d_r1__EN_R__l1_tfY__ + PM__L__d_r1__EC_R__l1_tfpY__ + 2 * EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfpY__ + 2 * PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY___R__l3_tfpY__ + 2 * PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfpY4___TF__dY_dna_im_r4__CP + EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfpY__ + EM__R__l_tfpY__ + PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfpY3___TF__dY_dna_im_r3__CP + PM__R__l_tfpY1___TF__dY_dna_im_r1__CP + EM__L__d_r1__EN_R__l1_tfpY__ + PM__L__d_r1__EC_R__l1_tfpY2___TF__dY_dna_im_r2__CP + 2 * EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY___R__l3_tfpY__ + 2 * EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfpY4___TF__dY_dna_im_r4__CP + 2 * PM__L__d1_r2__EC_L__d1_r3__EC_R__l3_tfpY4___R__l2_tfpY___TF__dY_dna_im_r4__CP + 2 * PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dY_dna_im_r5__CP + EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfpY3___TF__dY_dna_im_r3__CP + EM__R__l_tfpY1___TF__dY_dna_im_r1__CP + EM__L__d_r1__EN_R__l1_tfpY2___TF__dY_dna_im_r2__CP + 2 * EM__L__d1_r2__EN_L__d1_r3__EN_R__l3_tfpY4___R__l2_tfpY___TF__dY_dna_im_r4__CP + 2 * EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dY_dna_im_r5__CP + 2 * PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP + PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfpY3___TF__dpY_dna_im_r3__CP + PM__R__l_tfpY1___TF__dpY_dna_im_r1__CP + PM__L__d_r1__EC_R__l1_tfpY2___TF__dpY_dna_im_r2__CP + 2 * EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP + 2 * PM__L__d1_r2__EC_L__d1_r3__EC_R__l3_tfpY4___R__l2_tfpY___TF__dpY_dna_im_r4__CP + 2 * PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY4___R__l3_tfpY5___TF__dpY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP + 2 * PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfpY4___TF__dpY_dna_im_r4__CP + EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfpY3___TF__dpY_dna_im_r3__CP + EM__R__l_tfpY1___TF__dpY_dna_im_r1__CP + EM__L__d_r1__EN_R__l1_tfpY2___TF__dpY_dna_im_r2__CP + 2 * EM__L__d1_r2__EN_L__d1_r3__EN_R__l3_tfpY4___R__l2_tfpY___TF__dpY_dna_im_r4__CP + 2 * EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY4___R__l3_tfpY5___TF__dpY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP + 2 * EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfpY4___TF__dpY_dna_im_r4__CP
+end functions
+begin reaction rules
+	R1: EC__L__d_r__()@EC + PM__R__l_tfY__()@PM -> PM__L__d_r1__EC_R__l1_tfY__()@PM kp_LR
+	R2: EC__L__d_r__()@EC + EC__L__d_r__()@EC -> EC__L__d1_r___L__d1_r__()@EC functionRate1()
+	R3: CP__Im__cargo_fg__()@CP + NM__NP__fg__()@NM -> NM__Im__cargo_fg1__CP_NP__fg1__()@NM k_Im_enters_NP
+	R4: PM__R__l_tfY__()@PM + EC__L__d1_r___L__d1_r__()@EC -> PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfY__()@PM functionRate3()
+	R5: PM__L__d_r1__EC_R__l1_tfY__()@PM -> EC__L__d_r__()@EC + PM__R__l_tfY__()@PM km_LR
+	R6: EC__L__d_r__()@EC + PM__L__d_r1__EC_R__l1_tfY__()@PM -> PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfY__()@PM kp_LL
+	R7: PM__L__d_r1__EC_R__l1_tfY__()@PM + PM__L__d_r1__EC_R__l1_tfY__()@PM -> PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfY__()@PM functionRate6()
+	R8: EC__L__d1_r___L__d1_r__()@EC -> EC__L__d_r__()@EC + EC__L__d_r__()@EC km_LL
+	R9: NM__Im__cargo_fg1__CP_NP__fg1__()@NM -> CP__Im__cargo_fg__()@CP + NM__NP__fg__()@NM k_Im_exits_NP
+	R10: NM__Im__cargo_fg1__CP_NP__fg1__()@NM -> NM__Im__cargo_fg1__NU_NP__fg1__()@NM k_Im_cross_NP
+	R11: PM__R__l_tfY__()@PM + PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfY__()@PM -> PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfY__()@PM kp_LR
+	R12: PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfY__()@PM -> PM__R__l_tfY__()@PM + EC__L__d1_r___L__d1_r__()@EC km_LR
+	R13: PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfY__()@PM -> PM__R__l_tfY__()@PM + PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfY__()@PM functionRate12()
+	R14: PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfY__()@PM -> EC__L__d_r__()@EC + PM__L__d_r1__EC_R__l1_tfY__()@PM km_LL
+	R15: PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfY__()@PM -> PM__L__d_r1__EC_R__l1_tfY__()@PM + PM__L__d_r1__EC_R__l1_tfY__()@PM km_LL
+	R16: PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfY__()@PM -> EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfY__()@EM k_R_endo
+	R17: PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfY__()@PM -> PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfpY__()@PM functionRate16()
+	R18: NM__Im__cargo_fg1__NU_NP__fg1__()@NM -> NM__NP__fg__()@NM + NU__Im__cargo_fg__()@NU k_Im_exits_NP
+	R19: NM__Im__cargo_fg1__NU_NP__fg1__()@NM -> NM__Im__cargo_fg1__CP_NP__fg1__()@NM k_Im_cross_NP
+	R20: EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfY__()@EM -> EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfY__()@EM + EM__R__l_tfY__()@EM functionRate19()
+	R21: PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfpY__()@PM -> PM__R__l_tfY__()@PM + PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfpY__()@PM km_LR
+	R22: PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfpY__()@PM -> PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfY__()@PM + PM__R__l_tfpY__()@PM km_LR
+	R23: EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfY__()@EM -> EM__L__d_r1__EN_R__l1_tfY__()@EM + EM__L__d_r1__EN_R__l1_tfY__()@EM km_LL
+	R24: PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfpY__()@PM -> PM__L__d_r1__EC_R__l1_tfY__()@PM + PM__L__d_r1__EC_R__l1_tfpY__()@PM km_LL
+	R25: PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfpY__()@PM -> EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfpY__()@EM k_R_endo
+	R26: EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfY__()@EM -> PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfY__()@PM k_recycle
+	R27: EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfY__()@EM -> EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfpY__()@EM functionRate26()
+	R28: PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfpY__()@PM -> PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY___R__l3_tfpY__()@PM k_R_transphos
+	R29: PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfpY__()@PM -> PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfY__()@PM k_R_dephos
+	R30: CP__TF__dY_dna_im_r__()@CP + PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfpY__()@PM -> PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfpY4___TF__dY_dna_im_r4__CP()@PM kp_R_TF
+	R31: NM__NP__fg__()@NM + NU__Im__cargo_fg__()@NU -> NM__Im__cargo_fg1__NU_NP__fg1__()@NM k_Im_enters_NP
+	R32: EC__L__d_r__()@EC + PM__R__l_tfpY__()@PM -> PM__L__d_r1__EC_R__l1_tfpY__()@PM kp_LR
+	R33: EC__L__d1_r___L__d1_r__()@EC + PM__R__l_tfpY__()@PM -> PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfpY__()@PM functionRate32()
+	R34: PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfY__()@PM + PM__R__l_tfpY__()@PM -> PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfpY__()@PM kp_LR
+	R35: EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfY__()@EM + EM__R__l_tfY__()@EM -> EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfY__()@EM kp_LR
+	R36: PM__R__l_tfY__()@PM + PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfpY__()@PM -> PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfpY__()@PM kp_LR
+	R37: PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfpY__()@PM + PM__R__l_tfpY__()@PM -> PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY___R__l3_tfpY__()@PM kp_LR
+	R38: EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfY__()@EM -> EM__R__l_tfY__()@EM + EN__L__d1_r___L__d1_r__()@EN km_LR
+	R39: PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfpY__()@PM -> EC__L__d1_r___L__d1_r__()@EC + PM__R__l_tfpY__()@PM km_LR
+	R40: EM__L__d_r1__EN_R__l1_tfY__()@EM -> EM__R__l_tfY__()@EM + EN__L__d_r__()@EN km_LR
+	R41: PM__L__d_r1__EC_R__l1_tfpY__()@PM -> EC__L__d_r__()@EC + PM__R__l_tfpY__()@PM km_LR
+	R42: EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfpY__()@EM -> EM__R__l_tfY__()@EM + EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfpY__()@EM km_LR
+	R43: EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfpY__()@EM -> EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfY__()@EM + EM__R__l_tfpY__()@EM km_LR
+	R44: PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY___R__l3_tfpY__()@PM -> PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfpY__()@PM + PM__R__l_tfpY__()@PM functionRate43()
+	R45: PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfpY4___TF__dY_dna_im_r4__CP()@PM -> PM__R__l_tfY__()@PM + PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfpY3___TF__dY_dna_im_r3__CP()@PM km_LR
+	R46: PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfpY4___TF__dY_dna_im_r4__CP()@PM -> PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfY__()@PM + PM__R__l_tfpY1___TF__dY_dna_im_r1__CP()@PM km_LR
+	R47: EC__L__d_r__()@EC + PM__L__d_r1__EC_R__l1_tfpY__()@PM -> PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfpY__()@PM kp_LL
+	R48: PM__L__d_r1__EC_R__l1_tfY__()@PM + PM__L__d_r1__EC_R__l1_tfpY__()@PM -> PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfpY__()@PM kp_LL
+	R49: EM__L__d_r1__EN_R__l1_tfY__()@EM + EM__L__d_r1__EN_R__l1_tfY__()@EM -> EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfY__()@EM functionRate48()
+	R50: PM__L__d_r1__EC_R__l1_tfpY__()@PM + PM__L__d_r1__EC_R__l1_tfpY__()@PM -> PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY___R__l3_tfpY__()@PM functionRate49()
+	R51: EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfY__()@EM -> EM__L__d_r1__EN_R__l1_tfY__()@EM + EN__L__d_r__()@EN km_LL
+	R52: PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfpY__()@PM -> EC__L__d_r__()@EC + PM__L__d_r1__EC_R__l1_tfpY__()@PM km_LL
+	R53: EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfpY__()@EM -> EM__L__d_r1__EN_R__l1_tfY__()@EM + EM__L__d_r1__EN_R__l1_tfpY__()@EM km_LL
+	R54: PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY___R__l3_tfpY__()@PM -> PM__L__d_r1__EC_R__l1_tfpY__()@PM + PM__L__d_r1__EC_R__l1_tfpY__()@PM km_LL
+	R55: PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfpY4___TF__dY_dna_im_r4__CP()@PM -> PM__L__d_r1__EC_R__l1_tfY__()@PM + PM__L__d_r1__EC_R__l1_tfpY2___TF__dY_dna_im_r2__CP()@PM km_LL
+	R56: PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY___R__l3_tfpY__()@PM -> EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY___R__l3_tfpY__()@EM k_R_endo
+	R57: PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfpY4___TF__dY_dna_im_r4__CP()@PM -> EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfpY4___TF__dY_dna_im_r4__CP()@EM k_R_endo
+	R58: EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfY__()@EM -> PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfY__()@PM k_recycle
+	R59: EM__R__l_tfY__()@EM -> PM__R__l_tfY__()@PM k_recycle
+	R60: EM__L__d_r1__EN_R__l1_tfY__()@EM -> PM__L__d_r1__EC_R__l1_tfY__()@PM k_recycle
+	R61: EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfpY__()@EM -> PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfpY__()@PM k_recycle
+	R62: EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfpY__()@EM -> EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY___R__l3_tfpY__()@EM k_R_transphos
+	R63: PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfpY4___TF__dY_dna_im_r4__CP()@PM -> PM__L__d1_r2__EC_L__d1_r3__EC_R__l3_tfpY4___R__l2_tfpY___TF__dY_dna_im_r4__CP()@PM k_R_transphos
+	R64: PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfpY__()@PM -> PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfY__()@PM k_R_dephos
+	R65: PM__R__l_tfpY__()@PM -> PM__R__l_tfY__()@PM k_R_dephos
+	R66: PM__L__d_r1__EC_R__l1_tfpY__()@PM -> PM__L__d_r1__EC_R__l1_tfY__()@PM k_R_dephos
+	R67: EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfpY__()@EM -> EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfY__()@EM k_R_dephos
+	R68: PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY___R__l3_tfpY__()@PM -> PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfpY__()@PM functionRate67()
+	R69: CP__TF__dY_dna_im_r__()@CP + PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfpY__()@PM -> PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfpY3___TF__dY_dna_im_r3__CP()@PM kp_R_TF
+	R70: CP__TF__dY_dna_im_r__()@CP + PM__R__l_tfpY__()@PM -> PM__R__l_tfpY1___TF__dY_dna_im_r1__CP()@PM kp_R_TF
+	R71: CP__TF__dY_dna_im_r__()@CP + PM__L__d_r1__EC_R__l1_tfpY__()@PM -> PM__L__d_r1__EC_R__l1_tfpY2___TF__dY_dna_im_r2__CP()@PM kp_R_TF
+	R72: CP__TF__dY_dna_im_r__()@CP + EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfpY__()@EM -> EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfpY4___TF__dY_dna_im_r4__CP()@EM kp_R_TF
+	R73: CP__TF__dY_dna_im_r__()@CP + PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY___R__l3_tfpY__()@PM -> PM__L__d1_r2__EC_L__d1_r3__EC_R__l3_tfpY4___R__l2_tfpY___TF__dY_dna_im_r4__CP()@PM functionRate72()
+	R74: PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfpY4___TF__dY_dna_im_r4__CP()@PM -> CP__TF__dY_dna_im_r__()@CP + PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfpY__()@PM km_R_TF
+	R75: EC__L__d_r__()@EC + PM__R__l_tfpY1___TF__dY_dna_im_r1__CP()@PM -> PM__L__d_r1__EC_R__l1_tfpY2___TF__dY_dna_im_r2__CP()@PM kp_LR
+	R76: EC__L__d1_r___L__d1_r__()@EC + PM__R__l_tfpY1___TF__dY_dna_im_r1__CP()@PM -> PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfpY3___TF__dY_dna_im_r3__CP()@PM functionRate75()
+	R77: PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfY__()@PM + PM__R__l_tfpY1___TF__dY_dna_im_r1__CP()@PM -> PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfpY4___TF__dY_dna_im_r4__CP()@PM kp_LR
+	R78: EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfY__()@EM + EM__R__l_tfpY__()@EM -> EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfpY__()@EM kp_LR
+	R79: PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfpY__()@PM + PM__R__l_tfpY1___TF__dY_dna_im_r1__CP()@PM -> PM__L__d1_r2__EC_L__d1_r3__EC_R__l3_tfpY4___R__l2_tfpY___TF__dY_dna_im_r4__CP()@PM kp_LR
+	R80: EM__R__l_tfY__()@EM + EN__L__d1_r___L__d1_r__()@EN -> EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfY__()@EM functionRate79()
+	R81: EN__L__d1_r___L__d1_r__()@EN + EM__R__l_tfpY__()@EM -> EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfpY__()@EM functionRate80()
+	R82: EM__R__l_tfY__()@EM + EN__L__d_r__()@EN -> EM__L__d_r1__EN_R__l1_tfY__()@EM kp_LR
+	R83: EN__L__d_r__()@EN + EM__R__l_tfpY__()@EM -> EM__L__d_r1__EN_R__l1_tfpY__()@EM kp_LR
+	R84: EM__R__l_tfY__()@EM + EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfpY__()@EM -> EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfpY__()@EM kp_LR
+	R85: EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfpY__()@EM + EM__R__l_tfpY__()@EM -> EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY___R__l3_tfpY__()@EM kp_LR
+	R86: PM__R__l_tfY__()@PM + PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfpY3___TF__dY_dna_im_r3__CP()@PM -> PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfpY4___TF__dY_dna_im_r4__CP()@PM kp_LR
+	R87: PM__R__l_tfpY__()@PM + PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfpY3___TF__dY_dna_im_r3__CP()@PM -> PM__L__d1_r2__EC_L__d1_r3__EC_R__l3_tfpY4___R__l2_tfpY___TF__dY_dna_im_r4__CP()@PM kp_LR
+	R88: PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfpY3___TF__dY_dna_im_r3__CP()@PM + PM__R__l_tfpY1___TF__dY_dna_im_r1__CP()@PM -> PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dY_dna_im_r5__CP()@PM kp_LR
+	R89: EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfpY__()@EM -> EN__L__d1_r___L__d1_r__()@EN + EM__R__l_tfpY__()@EM km_LR
+	R90: PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfpY3___TF__dY_dna_im_r3__CP()@PM -> EC__L__d1_r___L__d1_r__()@EC + PM__R__l_tfpY1___TF__dY_dna_im_r1__CP()@PM km_LR
+	R91: EM__L__d_r1__EN_R__l1_tfpY__()@EM -> EN__L__d_r__()@EN + EM__R__l_tfpY__()@EM km_LR
+	R92: PM__L__d_r1__EC_R__l1_tfpY2___TF__dY_dna_im_r2__CP()@PM -> EC__L__d_r__()@EC + PM__R__l_tfpY1___TF__dY_dna_im_r1__CP()@PM km_LR
+	R93: EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY___R__l3_tfpY__()@EM -> EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfpY__()@EM + EM__R__l_tfpY__()@EM functionRate92()
+	R94: EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfpY4___TF__dY_dna_im_r4__CP()@EM -> EM__R__l_tfY__()@EM + EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfpY3___TF__dY_dna_im_r3__CP()@EM km_LR
+	R95: EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfpY4___TF__dY_dna_im_r4__CP()@EM -> EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfY__()@EM + EM__R__l_tfpY1___TF__dY_dna_im_r1__CP()@EM km_LR
+	R96: PM__L__d1_r2__EC_L__d1_r3__EC_R__l3_tfpY4___R__l2_tfpY___TF__dY_dna_im_r4__CP()@PM -> PM__R__l_tfpY__()@PM + PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfpY3___TF__dY_dna_im_r3__CP()@PM km_LR
+	R97: PM__L__d1_r2__EC_L__d1_r3__EC_R__l3_tfpY4___R__l2_tfpY___TF__dY_dna_im_r4__CP()@PM -> PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfpY__()@PM + PM__R__l_tfpY1___TF__dY_dna_im_r1__CP()@PM km_LR
+	R98: EC__L__d_r__()@EC + PM__L__d_r1__EC_R__l1_tfpY2___TF__dY_dna_im_r2__CP()@PM -> PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfpY3___TF__dY_dna_im_r3__CP()@PM kp_LL
+	R99: PM__L__d_r1__EC_R__l1_tfY__()@PM + PM__L__d_r1__EC_R__l1_tfpY2___TF__dY_dna_im_r2__CP()@PM -> PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfpY4___TF__dY_dna_im_r4__CP()@PM kp_LL
+	R100: EM__L__d_r1__EN_R__l1_tfY__()@EM + EN__L__d_r__()@EN -> EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfY__()@EM kp_LL
+	R101: EM__L__d_r1__EN_R__l1_tfY__()@EM + EM__L__d_r1__EN_R__l1_tfpY__()@EM -> EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfpY__()@EM kp_LL
+	R102: PM__L__d_r1__EC_R__l1_tfpY__()@PM + PM__L__d_r1__EC_R__l1_tfpY2___TF__dY_dna_im_r2__CP()@PM -> PM__L__d1_r2__EC_L__d1_r3__EC_R__l3_tfpY4___R__l2_tfpY___TF__dY_dna_im_r4__CP()@PM kp_LL
+	R103: EN__L__d_r__()@EN + EN__L__d_r__()@EN -> EN__L__d1_r___L__d1_r__()@EN functionRate102()
+	R104: EN__L__d_r__()@EN + EM__L__d_r1__EN_R__l1_tfpY__()@EM -> EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfpY__()@EM kp_LL
+	R105: EM__L__d_r1__EN_R__l1_tfpY__()@EM + EM__L__d_r1__EN_R__l1_tfpY__()@EM -> EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY___R__l3_tfpY__()@EM functionRate104()
+	R106: PM__L__d_r1__EC_R__l1_tfpY2___TF__dY_dna_im_r2__CP()@PM + PM__L__d_r1__EC_R__l1_tfpY2___TF__dY_dna_im_r2__CP()@PM -> PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dY_dna_im_r5__CP()@PM functionRate105()
+	R107: EN__L__d1_r___L__d1_r__()@EN -> EN__L__d_r__()@EN + EN__L__d_r__()@EN km_LL
+	R108: EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfpY__()@EM -> EN__L__d_r__()@EN + EM__L__d_r1__EN_R__l1_tfpY__()@EM km_LL
+	R109: PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfpY3___TF__dY_dna_im_r3__CP()@PM -> EC__L__d_r__()@EC + PM__L__d_r1__EC_R__l1_tfpY2___TF__dY_dna_im_r2__CP()@PM km_LL
+	R110: EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY___R__l3_tfpY__()@EM -> EM__L__d_r1__EN_R__l1_tfpY__()@EM + EM__L__d_r1__EN_R__l1_tfpY__()@EM km_LL
+	R111: EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfpY4___TF__dY_dna_im_r4__CP()@EM -> EM__L__d_r1__EN_R__l1_tfY__()@EM + EM__L__d_r1__EN_R__l1_tfpY2___TF__dY_dna_im_r2__CP()@EM km_LL
+	R112: PM__L__d1_r2__EC_L__d1_r3__EC_R__l3_tfpY4___R__l2_tfpY___TF__dY_dna_im_r4__CP()@PM -> PM__L__d_r1__EC_R__l1_tfpY__()@PM + PM__L__d_r1__EC_R__l1_tfpY2___TF__dY_dna_im_r2__CP()@PM km_LL
+	R113: PM__L__d1_r2__EC_L__d1_r3__EC_R__l3_tfpY4___R__l2_tfpY___TF__dY_dna_im_r4__CP()@PM -> EM__L__d1_r2__EN_L__d1_r3__EN_R__l3_tfpY4___R__l2_tfpY___TF__dY_dna_im_r4__CP()@EM k_R_endo
+	R114: EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfpY__()@EM -> PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfpY__()@PM k_recycle
+	R115: EM__R__l_tfpY__()@EM -> PM__R__l_tfpY__()@PM k_recycle
+	R116: EM__L__d_r1__EN_R__l1_tfpY__()@EM -> PM__L__d_r1__EC_R__l1_tfpY__()@PM k_recycle
+	R117: EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY___R__l3_tfpY__()@EM -> PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY___R__l3_tfpY__()@PM k_recycle
+	R118: EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfpY4___TF__dY_dna_im_r4__CP()@EM -> PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfpY4___TF__dY_dna_im_r4__CP()@PM k_recycle
+	R119: EN__L__d1_r___L__d1_r__()@EN -> EC__L__d1_r___L__d1_r__()@EC k_recycle
+	R120: EN__L__d_r__()@EN -> EC__L__d_r__()@EC k_recycle
+	R121: EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfpY4___TF__dY_dna_im_r4__CP()@EM -> EM__L__d1_r2__EN_L__d1_r3__EN_R__l3_tfpY4___R__l2_tfpY___TF__dY_dna_im_r4__CP()@EM k_R_transphos
+	R122: EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfpY__()@EM -> EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfY__()@EM k_R_dephos
+	R123: EM__R__l_tfpY__()@EM -> EM__R__l_tfY__()@EM k_R_dephos
+	R124: EM__L__d_r1__EN_R__l1_tfpY__()@EM -> EM__L__d_r1__EN_R__l1_tfY__()@EM k_R_dephos
+	R125: EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY___R__l3_tfpY__()@EM -> EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfpY__()@EM functionRate124()
+	R126: PM__L__d1_r2__EC_L__d1_r3__EC_R__l3_tfpY4___R__l2_tfpY___TF__dY_dna_im_r4__CP()@PM -> PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfpY4___TF__dY_dna_im_r4__CP()@PM k_R_dephos
+	R127: CP__TF__dY_dna_im_r__()@CP + EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfpY__()@EM -> EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfpY3___TF__dY_dna_im_r3__CP()@EM kp_R_TF
+	R128: CP__TF__dY_dna_im_r__()@CP + EM__R__l_tfpY__()@EM -> EM__R__l_tfpY1___TF__dY_dna_im_r1__CP()@EM kp_R_TF
+	R129: CP__TF__dY_dna_im_r__()@CP + EM__L__d_r1__EN_R__l1_tfpY__()@EM -> EM__L__d_r1__EN_R__l1_tfpY2___TF__dY_dna_im_r2__CP()@EM kp_R_TF
+	R130: CP__TF__dY_dna_im_r__()@CP + EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY___R__l3_tfpY__()@EM -> EM__L__d1_r2__EN_L__d1_r3__EN_R__l3_tfpY4___R__l2_tfpY___TF__dY_dna_im_r4__CP()@EM functionRate129()
+	R131: CP__TF__dY_dna_im_r__()@CP + PM__L__d1_r2__EC_L__d1_r3__EC_R__l3_tfpY4___R__l2_tfpY___TF__dY_dna_im_r4__CP()@PM -> PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dY_dna_im_r5__CP()@PM kp_R_TF
+	R132: PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfpY3___TF__dY_dna_im_r3__CP()@PM -> CP__TF__dY_dna_im_r__()@CP + PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfpY__()@PM km_R_TF
+	R133: PM__R__l_tfpY1___TF__dY_dna_im_r1__CP()@PM -> CP__TF__dY_dna_im_r__()@CP + PM__R__l_tfpY__()@PM km_R_TF
+	R134: PM__L__d_r1__EC_R__l1_tfpY2___TF__dY_dna_im_r2__CP()@PM -> CP__TF__dY_dna_im_r__()@CP + PM__L__d_r1__EC_R__l1_tfpY__()@PM km_R_TF
+	R135: EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfpY4___TF__dY_dna_im_r4__CP()@EM -> CP__TF__dY_dna_im_r__()@CP + EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfpY__()@EM km_R_TF
+	R136: PM__L__d1_r2__EC_L__d1_r3__EC_R__l3_tfpY4___R__l2_tfpY___TF__dY_dna_im_r4__CP()@PM -> CP__TF__dY_dna_im_r__()@CP + PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY___R__l3_tfpY__()@PM km_R_TF
+	R137: EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfY__()@EM + EM__R__l_tfpY1___TF__dY_dna_im_r1__CP()@EM -> EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfpY4___TF__dY_dna_im_r4__CP()@EM kp_LR
+	R138: EN__L__d1_r___L__d1_r__()@EN + EM__R__l_tfpY1___TF__dY_dna_im_r1__CP()@EM -> EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfpY3___TF__dY_dna_im_r3__CP()@EM functionRate137()
+	R139: EN__L__d_r__()@EN + EM__R__l_tfpY1___TF__dY_dna_im_r1__CP()@EM -> EM__L__d_r1__EN_R__l1_tfpY2___TF__dY_dna_im_r2__CP()@EM kp_LR
+	R140: EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfpY__()@EM + EM__R__l_tfpY1___TF__dY_dna_im_r1__CP()@EM -> EM__L__d1_r2__EN_L__d1_r3__EN_R__l3_tfpY4___R__l2_tfpY___TF__dY_dna_im_r4__CP()@EM kp_LR
+	R141: EM__R__l_tfY__()@EM + EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfpY3___TF__dY_dna_im_r3__CP()@EM -> EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfpY4___TF__dY_dna_im_r4__CP()@EM kp_LR
+	R142: EM__R__l_tfpY__()@EM + EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfpY3___TF__dY_dna_im_r3__CP()@EM -> EM__L__d1_r2__EN_L__d1_r3__EN_R__l3_tfpY4___R__l2_tfpY___TF__dY_dna_im_r4__CP()@EM kp_LR
+	R143: EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfpY3___TF__dY_dna_im_r3__CP()@EM + EM__R__l_tfpY1___TF__dY_dna_im_r1__CP()@EM -> EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dY_dna_im_r5__CP()@EM kp_LR
+	R144: PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dY_dna_im_r5__CP()@PM -> PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfpY3___TF__dY_dna_im_r3__CP()@PM + PM__R__l_tfpY1___TF__dY_dna_im_r1__CP()@PM functionRate143()
+	R145: EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfpY3___TF__dY_dna_im_r3__CP()@EM -> EN__L__d1_r___L__d1_r__()@EN + EM__R__l_tfpY1___TF__dY_dna_im_r1__CP()@EM km_LR
+	R146: EM__L__d_r1__EN_R__l1_tfpY2___TF__dY_dna_im_r2__CP()@EM -> EN__L__d_r__()@EN + EM__R__l_tfpY1___TF__dY_dna_im_r1__CP()@EM km_LR
+	R147: EM__L__d1_r2__EN_L__d1_r3__EN_R__l3_tfpY4___R__l2_tfpY___TF__dY_dna_im_r4__CP()@EM -> EM__R__l_tfpY__()@EM + EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfpY3___TF__dY_dna_im_r3__CP()@EM km_LR
+	R148: EM__L__d1_r2__EN_L__d1_r3__EN_R__l3_tfpY4___R__l2_tfpY___TF__dY_dna_im_r4__CP()@EM -> EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfpY__()@EM + EM__R__l_tfpY1___TF__dY_dna_im_r1__CP()@EM km_LR
+	R149: EM__L__d_r1__EN_R__l1_tfY__()@EM + EM__L__d_r1__EN_R__l1_tfpY2___TF__dY_dna_im_r2__CP()@EM -> EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfpY4___TF__dY_dna_im_r4__CP()@EM kp_LL
+	R150: EN__L__d_r__()@EN + EM__L__d_r1__EN_R__l1_tfpY2___TF__dY_dna_im_r2__CP()@EM -> EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfpY3___TF__dY_dna_im_r3__CP()@EM kp_LL
+	R151: EM__L__d_r1__EN_R__l1_tfpY__()@EM + EM__L__d_r1__EN_R__l1_tfpY2___TF__dY_dna_im_r2__CP()@EM -> EM__L__d1_r2__EN_L__d1_r3__EN_R__l3_tfpY4___R__l2_tfpY___TF__dY_dna_im_r4__CP()@EM kp_LL
+	R152: EM__L__d_r1__EN_R__l1_tfpY2___TF__dY_dna_im_r2__CP()@EM + EM__L__d_r1__EN_R__l1_tfpY2___TF__dY_dna_im_r2__CP()@EM -> EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dY_dna_im_r5__CP()@EM functionRate151()
+	R153: PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dY_dna_im_r5__CP()@PM -> PM__L__d_r1__EC_R__l1_tfpY2___TF__dY_dna_im_r2__CP()@PM + PM__L__d_r1__EC_R__l1_tfpY2___TF__dY_dna_im_r2__CP()@PM km_LL
+	R154: EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfpY3___TF__dY_dna_im_r3__CP()@EM -> EN__L__d_r__()@EN + EM__L__d_r1__EN_R__l1_tfpY2___TF__dY_dna_im_r2__CP()@EM km_LL
+	R155: EM__L__d1_r2__EN_L__d1_r3__EN_R__l3_tfpY4___R__l2_tfpY___TF__dY_dna_im_r4__CP()@EM -> EM__L__d_r1__EN_R__l1_tfpY__()@EM + EM__L__d_r1__EN_R__l1_tfpY2___TF__dY_dna_im_r2__CP()@EM km_LL
+	R156: PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dY_dna_im_r5__CP()@PM -> EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dY_dna_im_r5__CP()@EM k_R_endo
+	R157: EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfpY3___TF__dY_dna_im_r3__CP()@EM -> PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfpY3___TF__dY_dna_im_r3__CP()@PM k_recycle
+	R158: EM__R__l_tfpY1___TF__dY_dna_im_r1__CP()@EM -> PM__R__l_tfpY1___TF__dY_dna_im_r1__CP()@PM k_recycle
+	R159: EM__L__d_r1__EN_R__l1_tfpY2___TF__dY_dna_im_r2__CP()@EM -> PM__L__d_r1__EC_R__l1_tfpY2___TF__dY_dna_im_r2__CP()@PM k_recycle
+	R160: EM__L__d1_r2__EN_L__d1_r3__EN_R__l3_tfpY4___R__l2_tfpY___TF__dY_dna_im_r4__CP()@EM -> PM__L__d1_r2__EC_L__d1_r3__EC_R__l3_tfpY4___R__l2_tfpY___TF__dY_dna_im_r4__CP()@PM k_recycle
+	R161: EM__L__d1_r2__EN_L__d1_r3__EN_R__l3_tfpY4___R__l2_tfpY___TF__dY_dna_im_r4__CP()@EM -> EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfpY4___TF__dY_dna_im_r4__CP()@EM k_R_dephos
+	R162: CP__TF__dY_dna_im_r__()@CP + EM__L__d1_r2__EN_L__d1_r3__EN_R__l3_tfpY4___R__l2_tfpY___TF__dY_dna_im_r4__CP()@EM -> EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dY_dna_im_r5__CP()@EM kp_R_TF
+	R163: PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dY_dna_im_r5__CP()@PM -> CP__TF__dY_dna_im_r__()@CP + PM__L__d1_r2__EC_L__d1_r3__EC_R__l3_tfpY4___R__l2_tfpY___TF__dY_dna_im_r4__CP()@PM functionRate162()
+	R164: EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfpY3___TF__dY_dna_im_r3__CP()@EM -> CP__TF__dY_dna_im_r__()@CP + EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfpY__()@EM km_R_TF
+	R165: EM__R__l_tfpY1___TF__dY_dna_im_r1__CP()@EM -> CP__TF__dY_dna_im_r__()@CP + EM__R__l_tfpY__()@EM km_R_TF
+	R166: EM__L__d_r1__EN_R__l1_tfpY2___TF__dY_dna_im_r2__CP()@EM -> CP__TF__dY_dna_im_r__()@CP + EM__L__d_r1__EN_R__l1_tfpY__()@EM km_R_TF
+	R167: EM__L__d1_r2__EN_L__d1_r3__EN_R__l3_tfpY4___R__l2_tfpY___TF__dY_dna_im_r4__CP()@EM -> CP__TF__dY_dna_im_r__()@CP + EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY___R__l3_tfpY__()@EM km_R_TF
+	R168: PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dY_dna_im_r5__CP()@PM -> PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP()@PM functionRate167()
+	R169: EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dY_dna_im_r5__CP()@EM -> EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfpY3___TF__dY_dna_im_r3__CP()@EM + EM__R__l_tfpY1___TF__dY_dna_im_r1__CP()@EM functionRate168()
+	R170: PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP()@PM -> PM__R__l_tfpY1___TF__dY_dna_im_r1__CP()@PM + PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfpY3___TF__dpY_dna_im_r3__CP()@PM km_LR
+	R171: PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP()@PM -> PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfpY3___TF__dY_dna_im_r3__CP()@PM + PM__R__l_tfpY1___TF__dpY_dna_im_r1__CP()@PM km_LR
+	R172: EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dY_dna_im_r5__CP()@EM -> EM__L__d_r1__EN_R__l1_tfpY2___TF__dY_dna_im_r2__CP()@EM + EM__L__d_r1__EN_R__l1_tfpY2___TF__dY_dna_im_r2__CP()@EM km_LL
+	R173: PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP()@PM -> PM__L__d_r1__EC_R__l1_tfpY2___TF__dY_dna_im_r2__CP()@PM + PM__L__d_r1__EC_R__l1_tfpY2___TF__dpY_dna_im_r2__CP()@PM km_LL
+	R174: PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP()@PM -> EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP()@EM k_R_endo
+	R175: EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dY_dna_im_r5__CP()@EM -> PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dY_dna_im_r5__CP()@PM k_recycle
+	R176: EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dY_dna_im_r5__CP()@EM -> CP__TF__dY_dna_im_r__()@CP + EM__L__d1_r2__EN_L__d1_r3__EN_R__l3_tfpY4___R__l2_tfpY___TF__dY_dna_im_r4__CP()@EM functionRate175()
+	R177: PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP()@PM -> CP__TF__dY_dna_im_r__()@CP + PM__L__d1_r2__EC_L__d1_r3__EC_R__l3_tfpY4___R__l2_tfpY___TF__dpY_dna_im_r4__CP()@PM km_R_TF
+	R178: PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP()@PM -> PM__L__d1_r2__EC_L__d1_r3__EC_R__l3_tfpY4___R__l2_tfpY___TF__dY_dna_im_r4__CP()@PM + CP__TF__dpY_dna_im_r__()@CP km_R_TFp
+	R179: EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dY_dna_im_r5__CP()@EM -> EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP()@EM functionRate178()
+	R180: PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP()@PM -> PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY4___R__l3_tfpY5___TF__dpY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP()@PM k_TF_transphos
+	R181: PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP()@PM -> PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dY_dna_im_r5__CP()@PM k_TF_dephos
+	R182: EC__L__d_r__()@EC + PM__R__l_tfpY1___TF__dpY_dna_im_r1__CP()@PM -> PM__L__d_r1__EC_R__l1_tfpY2___TF__dpY_dna_im_r2__CP()@PM kp_LR
+	R183: EC__L__d1_r___L__d1_r__()@EC + PM__R__l_tfpY1___TF__dpY_dna_im_r1__CP()@PM -> PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfpY3___TF__dpY_dna_im_r3__CP()@PM functionRate182()
+	R184: PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfY__()@PM + PM__R__l_tfpY1___TF__dpY_dna_im_r1__CP()@PM -> PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfpY4___TF__dpY_dna_im_r4__CP()@PM kp_LR
+	R185: PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfpY__()@PM + PM__R__l_tfpY1___TF__dpY_dna_im_r1__CP()@PM -> PM__L__d1_r2__EC_L__d1_r3__EC_R__l3_tfpY4___R__l2_tfpY___TF__dpY_dna_im_r4__CP()@PM kp_LR
+	R186: PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfpY3___TF__dY_dna_im_r3__CP()@PM + PM__R__l_tfpY1___TF__dpY_dna_im_r1__CP()@PM -> PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP()@PM kp_LR
+	R187: PM__R__l_tfY__()@PM + PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfpY3___TF__dpY_dna_im_r3__CP()@PM -> PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfpY4___TF__dpY_dna_im_r4__CP()@PM kp_LR
+	R188: PM__R__l_tfpY__()@PM + PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfpY3___TF__dpY_dna_im_r3__CP()@PM -> PM__L__d1_r2__EC_L__d1_r3__EC_R__l3_tfpY4___R__l2_tfpY___TF__dpY_dna_im_r4__CP()@PM kp_LR
+	R189: PM__R__l_tfpY1___TF__dY_dna_im_r1__CP()@PM + PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfpY3___TF__dpY_dna_im_r3__CP()@PM -> PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP()@PM kp_LR
+	R190: PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfpY3___TF__dpY_dna_im_r3__CP()@PM + PM__R__l_tfpY1___TF__dpY_dna_im_r1__CP()@PM -> PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY4___R__l3_tfpY5___TF__dpY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP()@PM kp_LR
+	R191: PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfpY3___TF__dpY_dna_im_r3__CP()@PM -> EC__L__d1_r___L__d1_r__()@EC + PM__R__l_tfpY1___TF__dpY_dna_im_r1__CP()@PM km_LR
+	R192: PM__L__d_r1__EC_R__l1_tfpY2___TF__dpY_dna_im_r2__CP()@PM -> EC__L__d_r__()@EC + PM__R__l_tfpY1___TF__dpY_dna_im_r1__CP()@PM km_LR
+	R193: EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP()@EM -> EM__R__l_tfpY1___TF__dY_dna_im_r1__CP()@EM + EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfpY3___TF__dpY_dna_im_r3__CP()@EM km_LR
+	R194: EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP()@EM -> EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfpY3___TF__dY_dna_im_r3__CP()@EM + EM__R__l_tfpY1___TF__dpY_dna_im_r1__CP()@EM km_LR
+	R195: PM__L__d1_r2__EC_L__d1_r3__EC_R__l3_tfpY4___R__l2_tfpY___TF__dpY_dna_im_r4__CP()@PM -> PM__R__l_tfpY__()@PM + PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfpY3___TF__dpY_dna_im_r3__CP()@PM km_LR
+	R196: PM__L__d1_r2__EC_L__d1_r3__EC_R__l3_tfpY4___R__l2_tfpY___TF__dpY_dna_im_r4__CP()@PM -> PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfpY__()@PM + PM__R__l_tfpY1___TF__dpY_dna_im_r1__CP()@PM km_LR
+	R197: PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY4___R__l3_tfpY5___TF__dpY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP()@PM -> PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfpY3___TF__dpY_dna_im_r3__CP()@PM + PM__R__l_tfpY1___TF__dpY_dna_im_r1__CP()@PM functionRate196()
+	R198: EC__L__d_r__()@EC + PM__L__d_r1__EC_R__l1_tfpY2___TF__dpY_dna_im_r2__CP()@PM -> PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfpY3___TF__dpY_dna_im_r3__CP()@PM kp_LL
+	R199: PM__L__d_r1__EC_R__l1_tfY__()@PM + PM__L__d_r1__EC_R__l1_tfpY2___TF__dpY_dna_im_r2__CP()@PM -> PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfpY4___TF__dpY_dna_im_r4__CP()@PM kp_LL
+	R200: PM__L__d_r1__EC_R__l1_tfpY__()@PM + PM__L__d_r1__EC_R__l1_tfpY2___TF__dpY_dna_im_r2__CP()@PM -> PM__L__d1_r2__EC_L__d1_r3__EC_R__l3_tfpY4___R__l2_tfpY___TF__dpY_dna_im_r4__CP()@PM kp_LL
+	R201: PM__L__d_r1__EC_R__l1_tfpY2___TF__dY_dna_im_r2__CP()@PM + PM__L__d_r1__EC_R__l1_tfpY2___TF__dpY_dna_im_r2__CP()@PM -> PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP()@PM kp_LL
+	R202: PM__L__d_r1__EC_R__l1_tfpY2___TF__dpY_dna_im_r2__CP()@PM + PM__L__d_r1__EC_R__l1_tfpY2___TF__dpY_dna_im_r2__CP()@PM -> PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY4___R__l3_tfpY5___TF__dpY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP()@PM functionRate201()
+	R203: PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfpY3___TF__dpY_dna_im_r3__CP()@PM -> EC__L__d_r__()@EC + PM__L__d_r1__EC_R__l1_tfpY2___TF__dpY_dna_im_r2__CP()@PM km_LL
+	R204: EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP()@EM -> EM__L__d_r1__EN_R__l1_tfpY2___TF__dY_dna_im_r2__CP()@EM + EM__L__d_r1__EN_R__l1_tfpY2___TF__dpY_dna_im_r2__CP()@EM km_LL
+	R205: PM__L__d1_r2__EC_L__d1_r3__EC_R__l3_tfpY4___R__l2_tfpY___TF__dpY_dna_im_r4__CP()@PM -> PM__L__d_r1__EC_R__l1_tfpY__()@PM + PM__L__d_r1__EC_R__l1_tfpY2___TF__dpY_dna_im_r2__CP()@PM km_LL
+	R206: PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY4___R__l3_tfpY5___TF__dpY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP()@PM -> PM__L__d_r1__EC_R__l1_tfpY2___TF__dpY_dna_im_r2__CP()@PM + PM__L__d_r1__EC_R__l1_tfpY2___TF__dpY_dna_im_r2__CP()@PM km_LL
+	R207: PM__L__d1_r2__EC_L__d1_r3__EC_R__l3_tfpY4___R__l2_tfpY___TF__dpY_dna_im_r4__CP()@PM -> EM__L__d1_r2__EN_L__d1_r3__EN_R__l3_tfpY4___R__l2_tfpY___TF__dpY_dna_im_r4__CP()@EM k_R_endo
+	R208: PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY4___R__l3_tfpY5___TF__dpY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP()@PM -> EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY4___R__l3_tfpY5___TF__dpY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP()@EM k_R_endo
+	R209: EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP()@EM -> PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP()@PM k_recycle
+	R210: PM__L__d1_r2__EC_L__d1_r3__EC_R__l3_tfpY4___R__l2_tfpY___TF__dpY_dna_im_r4__CP()@PM -> PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfpY4___TF__dpY_dna_im_r4__CP()@PM k_R_dephos
+	R211: CP__TF__dY_dna_im_r__()@CP + PM__L__d1_r2__EC_L__d1_r3__EC_R__l3_tfpY4___R__l2_tfpY___TF__dpY_dna_im_r4__CP()@PM -> PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP()@PM kp_R_TF
+	R212: EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP()@EM -> CP__TF__dY_dna_im_r__()@CP + EM__L__d1_r2__EN_L__d1_r3__EN_R__l3_tfpY4___R__l2_tfpY___TF__dpY_dna_im_r4__CP()@EM km_R_TF
+	R213: PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfpY__()@PM + CP__TF__dpY_dna_im_r__()@CP -> PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfpY4___TF__dpY_dna_im_r4__CP()@PM kp_R_TFp
+	R214: PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfpY__()@PM + CP__TF__dpY_dna_im_r__()@CP -> PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfpY3___TF__dpY_dna_im_r3__CP()@PM kp_R_TFp
+	R215: PM__R__l_tfpY__()@PM + CP__TF__dpY_dna_im_r__()@CP -> PM__R__l_tfpY1___TF__dpY_dna_im_r1__CP()@PM kp_R_TFp
+	R216: PM__L__d_r1__EC_R__l1_tfpY__()@PM + CP__TF__dpY_dna_im_r__()@CP -> PM__L__d_r1__EC_R__l1_tfpY2___TF__dpY_dna_im_r2__CP()@PM kp_R_TFp
+	R217: EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfpY__()@EM + CP__TF__dpY_dna_im_r__()@CP -> EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfpY4___TF__dpY_dna_im_r4__CP()@EM kp_R_TFp
+	R218: PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY___R__l3_tfpY__()@PM + CP__TF__dpY_dna_im_r__()@CP -> PM__L__d1_r2__EC_L__d1_r3__EC_R__l3_tfpY4___R__l2_tfpY___TF__dpY_dna_im_r4__CP()@PM functionRate217()
+	R219: EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfpY__()@EM + CP__TF__dpY_dna_im_r__()@CP -> EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfpY3___TF__dpY_dna_im_r3__CP()@EM kp_R_TFp
+	R220: EM__R__l_tfpY__()@EM + CP__TF__dpY_dna_im_r__()@CP -> EM__R__l_tfpY1___TF__dpY_dna_im_r1__CP()@EM kp_R_TFp
+	R221: EM__L__d_r1__EN_R__l1_tfpY__()@EM + CP__TF__dpY_dna_im_r__()@CP -> EM__L__d_r1__EN_R__l1_tfpY2___TF__dpY_dna_im_r2__CP()@EM kp_R_TFp
+	R222: EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY___R__l3_tfpY__()@EM + CP__TF__dpY_dna_im_r__()@CP -> EM__L__d1_r2__EN_L__d1_r3__EN_R__l3_tfpY4___R__l2_tfpY___TF__dpY_dna_im_r4__CP()@EM functionRate221()
+	R223: PM__L__d1_r2__EC_L__d1_r3__EC_R__l3_tfpY4___R__l2_tfpY___TF__dY_dna_im_r4__CP()@PM + CP__TF__dpY_dna_im_r__()@CP -> PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP()@PM kp_R_TFp
+	R224: EM__L__d1_r2__EN_L__d1_r3__EN_R__l3_tfpY4___R__l2_tfpY___TF__dY_dna_im_r4__CP()@EM + CP__TF__dpY_dna_im_r__()@CP -> EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP()@EM kp_R_TFp
+	R225: PM__L__d1_r2__EC_L__d1_r3__EC_R__l3_tfpY4___R__l2_tfpY___TF__dpY_dna_im_r4__CP()@PM + CP__TF__dpY_dna_im_r__()@CP -> PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY4___R__l3_tfpY5___TF__dpY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP()@PM kp_R_TFp
+	R226: PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfpY3___TF__dpY_dna_im_r3__CP()@PM -> PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfpY__()@PM + CP__TF__dpY_dna_im_r__()@CP km_R_TFp
+	R227: PM__R__l_tfpY1___TF__dpY_dna_im_r1__CP()@PM -> PM__R__l_tfpY__()@PM + CP__TF__dpY_dna_im_r__()@CP km_R_TFp
+	R228: PM__L__d_r1__EC_R__l1_tfpY2___TF__dpY_dna_im_r2__CP()@PM -> PM__L__d_r1__EC_R__l1_tfpY__()@PM + CP__TF__dpY_dna_im_r__()@CP km_R_TFp
+	R229: EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP()@EM -> EM__L__d1_r2__EN_L__d1_r3__EN_R__l3_tfpY4___R__l2_tfpY___TF__dY_dna_im_r4__CP()@EM + CP__TF__dpY_dna_im_r__()@CP km_R_TFp
+	R230: PM__L__d1_r2__EC_L__d1_r3__EC_R__l3_tfpY4___R__l2_tfpY___TF__dpY_dna_im_r4__CP()@PM -> PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY___R__l3_tfpY__()@PM + CP__TF__dpY_dna_im_r__()@CP km_R_TFp
+	R231: PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY4___R__l3_tfpY5___TF__dpY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP()@PM -> PM__L__d1_r2__EC_L__d1_r3__EC_R__l3_tfpY4___R__l2_tfpY___TF__dpY_dna_im_r4__CP()@PM + CP__TF__dpY_dna_im_r__()@CP functionRate230()
+	R232: EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP()@EM -> EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY4___R__l3_tfpY5___TF__dpY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP()@EM k_TF_transphos
+	R233: PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfpY3___TF__dpY_dna_im_r3__CP()@PM -> PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfpY3___TF__dY_dna_im_r3__CP()@PM k_TF_dephos
+	R234: PM__R__l_tfpY1___TF__dpY_dna_im_r1__CP()@PM -> PM__R__l_tfpY1___TF__dY_dna_im_r1__CP()@PM k_TF_dephos
+	R235: PM__L__d_r1__EC_R__l1_tfpY2___TF__dpY_dna_im_r2__CP()@PM -> PM__L__d_r1__EC_R__l1_tfpY2___TF__dY_dna_im_r2__CP()@PM k_TF_dephos
+	R236: EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP()@EM -> EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dY_dna_im_r5__CP()@EM k_TF_dephos
+	R237: PM__L__d1_r2__EC_L__d1_r3__EC_R__l3_tfpY4___R__l2_tfpY___TF__dpY_dna_im_r4__CP()@PM -> PM__L__d1_r2__EC_L__d1_r3__EC_R__l3_tfpY4___R__l2_tfpY___TF__dY_dna_im_r4__CP()@PM k_TF_dephos
+	R238: CP__TF__dpY_dna_im_r__()@CP -> CP__TF__dY_dna_im_r__()@CP k_TF_dephos
+	R239: PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY4___R__l3_tfpY5___TF__dpY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP()@PM -> PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP()@PM functionRate238()
+	R240: CP__TF__dpY_dna_im_r__()@CP + CP__TF__dpY_dna_im_r__()@CP -> CP__TF__dpY1_dna_im_r___TF__dpY1_dna_im_r__()@CP functionRate239()
+	R241: EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfY__()@EM + EM__R__l_tfpY1___TF__dpY_dna_im_r1__CP()@EM -> EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfpY4___TF__dpY_dna_im_r4__CP()@EM kp_LR
+	R242: EN__L__d1_r___L__d1_r__()@EN + EM__R__l_tfpY1___TF__dpY_dna_im_r1__CP()@EM -> EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfpY3___TF__dpY_dna_im_r3__CP()@EM functionRate241()
+	R243: EN__L__d_r__()@EN + EM__R__l_tfpY1___TF__dpY_dna_im_r1__CP()@EM -> EM__L__d_r1__EN_R__l1_tfpY2___TF__dpY_dna_im_r2__CP()@EM kp_LR
+	R244: EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfpY__()@EM + EM__R__l_tfpY1___TF__dpY_dna_im_r1__CP()@EM -> EM__L__d1_r2__EN_L__d1_r3__EN_R__l3_tfpY4___R__l2_tfpY___TF__dpY_dna_im_r4__CP()@EM kp_LR
+	R245: EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfpY3___TF__dY_dna_im_r3__CP()@EM + EM__R__l_tfpY1___TF__dpY_dna_im_r1__CP()@EM -> EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP()@EM kp_LR
+	R246: EM__R__l_tfY__()@EM + EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfpY3___TF__dpY_dna_im_r3__CP()@EM -> EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfpY4___TF__dpY_dna_im_r4__CP()@EM kp_LR
+	R247: EM__R__l_tfpY__()@EM + EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfpY3___TF__dpY_dna_im_r3__CP()@EM -> EM__L__d1_r2__EN_L__d1_r3__EN_R__l3_tfpY4___R__l2_tfpY___TF__dpY_dna_im_r4__CP()@EM kp_LR
+	R248: EM__R__l_tfpY1___TF__dY_dna_im_r1__CP()@EM + EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfpY3___TF__dpY_dna_im_r3__CP()@EM -> EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP()@EM kp_LR
+	R249: EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfpY3___TF__dpY_dna_im_r3__CP()@EM + EM__R__l_tfpY1___TF__dpY_dna_im_r1__CP()@EM -> EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY4___R__l3_tfpY5___TF__dpY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP()@EM kp_LR
+	R250: PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfpY4___TF__dpY_dna_im_r4__CP()@PM -> PM__R__l_tfY__()@PM + PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfpY3___TF__dpY_dna_im_r3__CP()@PM km_LR
+	R251: PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfpY4___TF__dpY_dna_im_r4__CP()@PM -> PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfY__()@PM + PM__R__l_tfpY1___TF__dpY_dna_im_r1__CP()@PM km_LR
+	R252: EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfpY3___TF__dpY_dna_im_r3__CP()@EM -> EN__L__d1_r___L__d1_r__()@EN + EM__R__l_tfpY1___TF__dpY_dna_im_r1__CP()@EM km_LR
+	R253: EM__L__d_r1__EN_R__l1_tfpY2___TF__dpY_dna_im_r2__CP()@EM -> EN__L__d_r__()@EN + EM__R__l_tfpY1___TF__dpY_dna_im_r1__CP()@EM km_LR
+	R254: EM__L__d1_r2__EN_L__d1_r3__EN_R__l3_tfpY4___R__l2_tfpY___TF__dpY_dna_im_r4__CP()@EM -> EM__R__l_tfpY__()@EM + EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfpY3___TF__dpY_dna_im_r3__CP()@EM km_LR
+	R255: EM__L__d1_r2__EN_L__d1_r3__EN_R__l3_tfpY4___R__l2_tfpY___TF__dpY_dna_im_r4__CP()@EM -> EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfpY__()@EM + EM__R__l_tfpY1___TF__dpY_dna_im_r1__CP()@EM km_LR
+	R256: EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY4___R__l3_tfpY5___TF__dpY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP()@EM -> EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfpY3___TF__dpY_dna_im_r3__CP()@EM + EM__R__l_tfpY1___TF__dpY_dna_im_r1__CP()@EM functionRate255()
+	R257: EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfpY4___TF__dpY_dna_im_r4__CP()@EM -> EM__R__l_tfY__()@EM + EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfpY3___TF__dpY_dna_im_r3__CP()@EM km_LR
+	R258: EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfpY4___TF__dpY_dna_im_r4__CP()@EM -> EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfY__()@EM + EM__R__l_tfpY1___TF__dpY_dna_im_r1__CP()@EM km_LR
+	R259: EM__L__d_r1__EN_R__l1_tfY__()@EM + EM__L__d_r1__EN_R__l1_tfpY2___TF__dpY_dna_im_r2__CP()@EM -> EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfpY4___TF__dpY_dna_im_r4__CP()@EM kp_LL
+	R260: EN__L__d_r__()@EN + EM__L__d_r1__EN_R__l1_tfpY2___TF__dpY_dna_im_r2__CP()@EM -> EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfpY3___TF__dpY_dna_im_r3__CP()@EM kp_LL
+	R261: EM__L__d_r1__EN_R__l1_tfpY__()@EM + EM__L__d_r1__EN_R__l1_tfpY2___TF__dpY_dna_im_r2__CP()@EM -> EM__L__d1_r2__EN_L__d1_r3__EN_R__l3_tfpY4___R__l2_tfpY___TF__dpY_dna_im_r4__CP()@EM kp_LL
+	R262: EM__L__d_r1__EN_R__l1_tfpY2___TF__dY_dna_im_r2__CP()@EM + EM__L__d_r1__EN_R__l1_tfpY2___TF__dpY_dna_im_r2__CP()@EM -> EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP()@EM kp_LL
+	R263: EM__L__d_r1__EN_R__l1_tfpY2___TF__dpY_dna_im_r2__CP()@EM + EM__L__d_r1__EN_R__l1_tfpY2___TF__dpY_dna_im_r2__CP()@EM -> EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY4___R__l3_tfpY5___TF__dpY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP()@EM functionRate262()
+	R264: PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfpY4___TF__dpY_dna_im_r4__CP()@PM -> PM__L__d_r1__EC_R__l1_tfY__()@PM + PM__L__d_r1__EC_R__l1_tfpY2___TF__dpY_dna_im_r2__CP()@PM km_LL
+	R265: EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfpY3___TF__dpY_dna_im_r3__CP()@EM -> EN__L__d_r__()@EN + EM__L__d_r1__EN_R__l1_tfpY2___TF__dpY_dna_im_r2__CP()@EM km_LL
+	R266: EM__L__d1_r2__EN_L__d1_r3__EN_R__l3_tfpY4___R__l2_tfpY___TF__dpY_dna_im_r4__CP()@EM -> EM__L__d_r1__EN_R__l1_tfpY__()@EM + EM__L__d_r1__EN_R__l1_tfpY2___TF__dpY_dna_im_r2__CP()@EM km_LL
+	R267: EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY4___R__l3_tfpY5___TF__dpY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP()@EM -> EM__L__d_r1__EN_R__l1_tfpY2___TF__dpY_dna_im_r2__CP()@EM + EM__L__d_r1__EN_R__l1_tfpY2___TF__dpY_dna_im_r2__CP()@EM km_LL
+	R268: EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfpY4___TF__dpY_dna_im_r4__CP()@EM -> EM__L__d_r1__EN_R__l1_tfY__()@EM + EM__L__d_r1__EN_R__l1_tfpY2___TF__dpY_dna_im_r2__CP()@EM km_LL
+	R269: PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfpY4___TF__dpY_dna_im_r4__CP()@PM -> EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfpY4___TF__dpY_dna_im_r4__CP()@EM k_R_endo
+	R270: EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfpY3___TF__dpY_dna_im_r3__CP()@EM -> PM__L__d1_r2__EC_L__d1_r__EC_R__l2_tfpY3___TF__dpY_dna_im_r3__CP()@PM k_recycle
+	R271: EM__R__l_tfpY1___TF__dpY_dna_im_r1__CP()@EM -> PM__R__l_tfpY1___TF__dpY_dna_im_r1__CP()@PM k_recycle
+	R272: EM__L__d_r1__EN_R__l1_tfpY2___TF__dpY_dna_im_r2__CP()@EM -> PM__L__d_r1__EC_R__l1_tfpY2___TF__dpY_dna_im_r2__CP()@PM k_recycle
+	R273: EM__L__d1_r2__EN_L__d1_r3__EN_R__l3_tfpY4___R__l2_tfpY___TF__dpY_dna_im_r4__CP()@EM -> PM__L__d1_r2__EC_L__d1_r3__EC_R__l3_tfpY4___R__l2_tfpY___TF__dpY_dna_im_r4__CP()@PM k_recycle
+	R274: EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY4___R__l3_tfpY5___TF__dpY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP()@EM -> PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfpY4___R__l3_tfpY5___TF__dpY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP()@PM k_recycle
+	R275: EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfpY4___TF__dpY_dna_im_r4__CP()@EM -> PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfpY4___TF__dpY_dna_im_r4__CP()@PM k_recycle
+	R276: PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfpY4___TF__dpY_dna_im_r4__CP()@PM -> PM__L__d1_r2__EC_L__d1_r3__EC_R__l3_tfpY4___R__l2_tfpY___TF__dpY_dna_im_r4__CP()@PM k_R_transphos
+	R277: EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfpY4___TF__dpY_dna_im_r4__CP()@EM -> EM__L__d1_r2__EN_L__d1_r3__EN_R__l3_tfpY4___R__l2_tfpY___TF__dpY_dna_im_r4__CP()@EM k_R_transphos
+	R278: EM__L__d1_r2__EN_L__d1_r3__EN_R__l3_tfpY4___R__l2_tfpY___TF__dpY_dna_im_r4__CP()@EM -> EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfpY4___TF__dpY_dna_im_r4__CP()@EM k_R_dephos
+	R279: CP__TF__dY_dna_im_r__()@CP + EM__L__d1_r2__EN_L__d1_r3__EN_R__l3_tfpY4___R__l2_tfpY___TF__dpY_dna_im_r4__CP()@EM -> EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP()@EM kp_R_TF
+	R280: CP__TF__dpY_dna_im_r__()@CP + EM__L__d1_r2__EN_L__d1_r3__EN_R__l3_tfpY4___R__l2_tfpY___TF__dpY_dna_im_r4__CP()@EM -> EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY4___R__l3_tfpY5___TF__dpY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP()@EM kp_R_TFp
+	R281: PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfpY4___TF__dpY_dna_im_r4__CP()@PM -> PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfpY__()@PM + CP__TF__dpY_dna_im_r__()@CP km_R_TFp
+	R282: EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfpY3___TF__dpY_dna_im_r3__CP()@EM -> EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfpY__()@EM + CP__TF__dpY_dna_im_r__()@CP km_R_TFp
+	R283: EM__R__l_tfpY1___TF__dpY_dna_im_r1__CP()@EM -> EM__R__l_tfpY__()@EM + CP__TF__dpY_dna_im_r__()@CP km_R_TFp
+	R284: EM__L__d_r1__EN_R__l1_tfpY2___TF__dpY_dna_im_r2__CP()@EM -> EM__L__d_r1__EN_R__l1_tfpY__()@EM + CP__TF__dpY_dna_im_r__()@CP km_R_TFp
+	R285: EM__L__d1_r2__EN_L__d1_r3__EN_R__l3_tfpY4___R__l2_tfpY___TF__dpY_dna_im_r4__CP()@EM -> EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY___R__l3_tfpY__()@EM + CP__TF__dpY_dna_im_r__()@CP km_R_TFp
+	R286: EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY4___R__l3_tfpY5___TF__dpY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP()@EM -> CP__TF__dpY_dna_im_r__()@CP + EM__L__d1_r2__EN_L__d1_r3__EN_R__l3_tfpY4___R__l2_tfpY___TF__dpY_dna_im_r4__CP()@EM functionRate285()
+	R287: EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfpY4___TF__dpY_dna_im_r4__CP()@EM -> EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfpY__()@EM + CP__TF__dpY_dna_im_r__()@CP km_R_TFp
+	R288: PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfpY4___TF__dpY_dna_im_r4__CP()@PM -> PM__L__d1_r2__EC_L__d1_r3__EC_R__l2_tfY___R__l3_tfpY4___TF__dY_dna_im_r4__CP()@PM k_TF_dephos
+	R289: EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfpY3___TF__dpY_dna_im_r3__CP()@EM -> EM__L__d1_r2__EN_L__d1_r__EN_R__l2_tfpY3___TF__dY_dna_im_r3__CP()@EM k_TF_dephos
+	R290: EM__R__l_tfpY1___TF__dpY_dna_im_r1__CP()@EM -> EM__R__l_tfpY1___TF__dY_dna_im_r1__CP()@EM k_TF_dephos
+	R291: EM__L__d_r1__EN_R__l1_tfpY2___TF__dpY_dna_im_r2__CP()@EM -> EM__L__d_r1__EN_R__l1_tfpY2___TF__dY_dna_im_r2__CP()@EM k_TF_dephos
+	R292: EM__L__d1_r2__EN_L__d1_r3__EN_R__l3_tfpY4___R__l2_tfpY___TF__dpY_dna_im_r4__CP()@EM -> EM__L__d1_r2__EN_L__d1_r3__EN_R__l3_tfpY4___R__l2_tfpY___TF__dY_dna_im_r4__CP()@EM k_TF_dephos
+	R293: EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY4___R__l3_tfpY5___TF__dpY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP()@EM -> EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfpY4___R__l3_tfpY5___TF__dY_dna_im_r4__CP_TF__dpY_dna_im_r5__CP()@EM functionRate292()
+	R294: EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfpY4___TF__dpY_dna_im_r4__CP()@EM -> EM__L__d1_r2__EN_L__d1_r3__EN_R__l2_tfY___R__l3_tfpY4___TF__dY_dna_im_r4__CP()@EM k_TF_dephos
+	R295: CP__TF__dpY1_dna_im_r___TF__dpY1_dna_im_r__()@CP -> CP__TF__dpY_dna_im_r__()@CP + CP__TF__dpY_dna_im_r__()@CP km_TF_TF
+	R296: CP__Im__cargo_fg__()@CP + CP__TF__dpY1_dna_im_r___TF__dpY1_dna_im_r__()@CP -> CP__Im__cargo12_fg___TF__dpY3_dna_im1_r___TF__dpY3_dna_im2_r__()@CP k_Im_bind_CP
+	R297: NM__Im__cargo_fg1__CP_NP__fg1__()@NM + CP__TF__dpY1_dna_im_r___TF__dpY1_dna_im_r__()@CP -> NM__Im__cargo12_fg3__CP_NP__fg3___TF__dpY4_dna_im1_r__CP_TF__dpY4_dna_im2_r__CP()@NM k_Im_bind_CP
+	R298: CP__Im__cargo12_fg___TF__dpY3_dna_im1_r___TF__dpY3_dna_im2_r__()@CP -> CP__Im__cargo_fg__()@CP + CP__TF__dpY1_dna_im_r___TF__dpY1_dna_im_r__()@CP k_Im_unbind_CP
+	R299: NM__Im__cargo12_fg3__CP_NP__fg3___TF__dpY4_dna_im1_r__CP_TF__dpY4_dna_im2_r__CP()@NM -> NM__Im__cargo_fg1__CP_NP__fg1__()@NM + CP__TF__dpY1_dna_im_r___TF__dpY1_dna_im_r__()@CP k_Im_unbind_CP
+	R300: NM__NP__fg__()@NM + CP__Im__cargo12_fg___TF__dpY3_dna_im1_r___TF__dpY3_dna_im2_r__()@CP -> NM__Im__cargo12_fg3__CP_NP__fg3___TF__dpY4_dna_im1_r__CP_TF__dpY4_dna_im2_r__CP()@NM k_Im_enters_NP
+	R301: NM__Im__cargo12_fg3__CP_NP__fg3___TF__dpY4_dna_im1_r__CP_TF__dpY4_dna_im2_r__CP()@NM -> NM__NP__fg__()@NM + CP__Im__cargo12_fg___TF__dpY3_dna_im1_r___TF__dpY3_dna_im2_r__()@CP k_Im_exits_NP
+	R302: NM__Im__cargo12_fg3__CP_NP__fg3___TF__dpY4_dna_im1_r__CP_TF__dpY4_dna_im2_r__CP()@NM -> NM__Im__cargo12_fg3__NU_NP__fg3___TF__dpY4_dna_im1_r__NU_TF__dpY4_dna_im2_r__NU()@NM k_Im_cross_NP
+	R303: NM__Im__cargo12_fg3__NU_NP__fg3___TF__dpY4_dna_im1_r__NU_TF__dpY4_dna_im2_r__NU()@NM -> NM__Im__cargo_fg1__NU_NP__fg1__()@NM + NU__TF__dpY1_dna_im_r___TF__dpY1_dna_im_r__()@NU k_Im_unbind_NU
+	R304: NM__Im__cargo12_fg3__NU_NP__fg3___TF__dpY4_dna_im1_r__NU_TF__dpY4_dna_im2_r__NU()@NM -> NM__NP__fg__()@NM + NU__Im__cargo12_fg___TF__dpY3_dna_im1_r___TF__dpY3_dna_im2_r__()@NU k_Im_exits_NP
+	R305: NM__Im__cargo12_fg3__NU_NP__fg3___TF__dpY4_dna_im1_r__NU_TF__dpY4_dna_im2_r__NU()@NM -> NM__Im__cargo12_fg3__CP_NP__fg3___TF__dpY4_dna_im1_r__CP_TF__dpY4_dna_im2_r__CP()@NM k_Im_cross_NP
+	R306: NU__TF__dpY1_dna_im_r___TF__dpY1_dna_im_r__()@NU -> NU__TF__dpY_dna_im_r__()@NU + NU__TF__dpY_dna_im_r__()@NU km_TF_TF
+	R307: NU__DNA__p1_p2__()@NU + NU__TF__dpY1_dna_im_r___TF__dpY1_dna_im_r__()@NU -> NU__DNA__p112_p2___TF__dpY3_dna1_im_r___TF__dpY3_dna2_im_r__()@NU kp_TF_p1
+	R308: NM__Im__cargo_fg1__NU_NP__fg1__()@NM + NU__TF__dpY1_dna_im_r___TF__dpY1_dna_im_r__()@NU -> NM__Im__cargo12_fg3__NU_NP__fg3___TF__dpY4_dna_im1_r__NU_TF__dpY4_dna_im2_r__NU()@NM k_Im_bind_NU
+	R309: NU__Im__cargo_fg__()@NU + NU__TF__dpY1_dna_im_r___TF__dpY1_dna_im_r__()@NU -> NU__Im__cargo12_fg___TF__dpY3_dna_im1_r___TF__dpY3_dna_im2_r__()@NU k_Im_bind_NU
+	R310: NU__Im__cargo12_fg___TF__dpY3_dna_im1_r___TF__dpY3_dna_im2_r__()@NU -> NU__Im__cargo_fg__()@NU + NU__TF__dpY1_dna_im_r___TF__dpY1_dna_im_r__()@NU k_Im_unbind_NU
+	R311: NM__NP__fg__()@NM + NU__Im__cargo12_fg___TF__dpY3_dna_im1_r___TF__dpY3_dna_im2_r__()@NU -> NM__Im__cargo12_fg3__NU_NP__fg3___TF__dpY4_dna_im1_r__NU_TF__dpY4_dna_im2_r__NU()@NM k_Im_enters_NP
+	R312: NU__TF__dpY_dna_im_r__()@NU + NU__TF__dpY_dna_im_r__()@NU -> NU__TF__dpY1_dna_im_r___TF__dpY1_dna_im_r__()@NU functionRate311()
+	R313: NU__DNA__p112_p2___TF__dpY3_dna1_im_r___TF__dpY3_dna2_im_r__()@NU -> NU__DNA__p1_p2__()@NU + NU__TF__dpY1_dna_im_r___TF__dpY1_dna_im_r__()@NU km_TF_p1
+	R314: NU__DNA__p112_p2___TF__dpY3_dna1_im_r___TF__dpY3_dna2_im_r__()@NU -> NU__DNA__p112_p2___TF__dpY3_dna1_im_r___TF__dpY3_dna2_im_r__()@NU + NU__mRNA1____()@NU k_transcribe
+	R315: NU__mRNA1____()@NU -> CP__mRNA1____()@CP k_mRNA_to_CP
+	R316: NU__mRNA1____()@NU -> CP__Sink____()@CP k_mRNA_deg
+	R317: CP__mRNA1____()@CP -> CP__mRNA1____()@CP + CP__P1__dna_im__()@CP k_translate
+	R318: CP__mRNA1____()@CP -> CP__Sink____()@CP k_mRNA_deg
+	R319: CP__P1__dna_im__()@CP -> CP__Sink____()@CP k_P_deg
+	R320: CP__Im__cargo_fg__()@CP + CP__P1__dna_im__()@CP -> CP__Im__cargo1_fg___P1__dna_im1__()@CP k_Im_bind_CP
+	R321: NM__Im__cargo_fg1__CP_NP__fg1__()@NM + CP__P1__dna_im__()@CP -> NM__Im__cargo1_fg2__CP_NP__fg2___P1__dna_im1__CP()@NM k_Im_bind_CP
+	R322: CP__Im__cargo1_fg___P1__dna_im1__()@CP -> CP__Im__cargo_fg__()@CP + CP__Sink____()@CP k_P_deg
+	R323: NM__Im__cargo1_fg2__CP_NP__fg2___P1__dna_im1__CP()@NM -> CP__Sink____()@CP + NM__Im__cargo_fg1__CP_NP__fg1__()@NM k_P_deg
+	R324: CP__Im__cargo1_fg___P1__dna_im1__()@CP -> CP__Im__cargo_fg__()@CP + CP__P1__dna_im__()@CP k_Im_unbind_CP
+	R325: NM__Im__cargo1_fg2__CP_NP__fg2___P1__dna_im1__CP()@NM -> NM__Im__cargo_fg1__CP_NP__fg1__()@NM + CP__P1__dna_im__()@CP k_Im_unbind_CP
+	R326: NM__NP__fg__()@NM + CP__Im__cargo1_fg___P1__dna_im1__()@CP -> NM__Im__cargo1_fg2__CP_NP__fg2___P1__dna_im1__CP()@NM k_Im_enters_NP
+	R327: NM__Im__cargo1_fg2__CP_NP__fg2___P1__dna_im1__CP()@NM -> NM__NP__fg__()@NM + CP__Im__cargo1_fg___P1__dna_im1__()@CP k_Im_exits_NP
+	R328: NM__Im__cargo1_fg2__CP_NP__fg2___P1__dna_im1__CP()@NM -> NM__Im__cargo1_fg2__NU_NP__fg2___P1__dna_im1__NU()@NM k_Im_cross_NP
+	R329: NM__Im__cargo1_fg2__NU_NP__fg2___P1__dna_im1__NU()@NM -> CP__Sink____()@CP + NM__Im__cargo_fg1__NU_NP__fg1__()@NM k_P_deg
+	R330: NM__Im__cargo1_fg2__NU_NP__fg2___P1__dna_im1__NU()@NM -> NM__Im__cargo_fg1__NU_NP__fg1__()@NM + NU__P1__dna_im__()@NU k_Im_unbind_NU
+	R331: NM__Im__cargo1_fg2__NU_NP__fg2___P1__dna_im1__NU()@NM -> NM__NP__fg__()@NM + NU__Im__cargo1_fg___P1__dna_im1__()@NU k_Im_exits_NP
+	R332: NM__Im__cargo1_fg2__NU_NP__fg2___P1__dna_im1__NU()@NM -> NM__Im__cargo1_fg2__CP_NP__fg2___P1__dna_im1__CP()@NM k_Im_cross_NP
+	R333: NU__P1__dna_im__()@NU -> CP__Sink____()@CP k_P_deg
+	R334: NU__Im__cargo1_fg___P1__dna_im1__()@NU -> CP__Sink____()@CP + NU__Im__cargo_fg__()@NU k_P_deg
+	R335: NM__Im__cargo_fg1__NU_NP__fg1__()@NM + NU__P1__dna_im__()@NU -> NM__Im__cargo1_fg2__NU_NP__fg2___P1__dna_im1__NU()@NM k_Im_bind_NU
+	R336: NU__Im__cargo_fg__()@NU + NU__P1__dna_im__()@NU -> NU__Im__cargo1_fg___P1__dna_im1__()@NU k_Im_bind_NU
+	R337: NU__Im__cargo1_fg___P1__dna_im1__()@NU -> NU__Im__cargo_fg__()@NU + NU__P1__dna_im__()@NU k_Im_unbind_NU
+	R338: NM__NP__fg__()@NM + NU__Im__cargo1_fg___P1__dna_im1__()@NU -> NM__Im__cargo1_fg2__NU_NP__fg2___P1__dna_im1__NU()@NM k_Im_enters_NP
+	R339: NU__DNA__p1_p2__()@NU + NU__P1__dna_im__()@NU -> NU__DNA__p1_p21___P1__dna1_im__()@NU kp_P1_p2
+	R340: NU__DNA__p112_p2___TF__dpY3_dna1_im_r___TF__dpY3_dna2_im_r__()@NU + NU__P1__dna_im__()@NU -> NU__DNA__p112_p23___P1__dna3_im___TF__dpY4_dna1_im_r___TF__dpY4_dna2_im_r__()@NU kp_P1_p2
+	R341: NU__TF__dpY1_dna_im_r___TF__dpY1_dna_im_r__()@NU + NU__DNA__p1_p21___P1__dna1_im__()@NU -> NU__DNA__p112_p23___P1__dna3_im___TF__dpY4_dna1_im_r___TF__dpY4_dna2_im_r__()@NU kp_TF_p1
+	R342: NU__DNA__p112_p23___P1__dna3_im___TF__dpY4_dna1_im_r___TF__dpY4_dna2_im_r__()@NU -> NU__TF__dpY1_dna_im_r___TF__dpY1_dna_im_r__()@NU + NU__DNA__p1_p21___P1__dna1_im__()@NU km_TF_p1
+	R343: NU__DNA__p112_p23___P1__dna3_im___TF__dpY4_dna1_im_r___TF__dpY4_dna2_im_r__()@NU -> NU__mRNA1____()@NU + NU__DNA__p112_p23___P1__dna3_im___TF__dpY4_dna1_im_r___TF__dpY4_dna2_im_r__()@NU k_transcribe
+	R344: NU__DNA__p1_p21___P1__dna1_im__()@NU -> NU__DNA__p1_p21___P1__dna1_im__()@NU + NU__mRNA2____()@NU k_transcribe
+	R345: NU__DNA__p112_p23___P1__dna3_im___TF__dpY4_dna1_im_r___TF__dpY4_dna2_im_r__()@NU -> NU__DNA__p112_p23___P1__dna3_im___TF__dpY4_dna1_im_r___TF__dpY4_dna2_im_r__()@NU + NU__mRNA2____()@NU k_transcribe
+	R346: NU__DNA__p1_p21___P1__dna1_im__()@NU -> NU__DNA__p1_p2__()@NU + CP__Sink____()@CP k_P_deg
+	R347: NU__DNA__p112_p23___P1__dna3_im___TF__dpY4_dna1_im_r___TF__dpY4_dna2_im_r__()@NU -> CP__Sink____()@CP + NU__DNA__p112_p2___TF__dpY3_dna1_im_r___TF__dpY3_dna2_im_r__()@NU k_P_deg
+	R348: NU__DNA__p1_p21___P1__dna1_im__()@NU -> NU__DNA__p1_p2__()@NU + NU__P1__dna_im__()@NU km_P1_p2
+	R349: NU__DNA__p112_p23___P1__dna3_im___TF__dpY4_dna1_im_r___TF__dpY4_dna2_im_r__()@NU -> NU__DNA__p112_p2___TF__dpY3_dna1_im_r___TF__dpY3_dna2_im_r__()@NU + NU__P1__dna_im__()@NU km_P1_p2
+	R350: NU__mRNA2____()@NU -> CP__mRNA2____()@CP k_mRNA_to_CP
+	R351: NU__mRNA2____()@NU -> CP__Sink____()@CP k_mRNA_deg
+	R352: CP__mRNA2____()@CP -> CP__mRNA2____()@CP + CP__P2____()@CP k_translate
+	R353: CP__mRNA2____()@CP -> CP__Sink____()@CP k_mRNA_deg
+	R354: CP__P2____()@CP -> CP__Sink____()@CP k_P_deg
+end reaction rules
+end model

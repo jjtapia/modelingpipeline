@@ -1,0 +1,7 @@
+begin   parameters
+  cL0   9.000000e-09
+  cR0   7.860978e-23
+  cTF0   1.551913e-08
+  cNP0   1.228828e-23
+  cIm0   1.700000e-08
+end   parameters

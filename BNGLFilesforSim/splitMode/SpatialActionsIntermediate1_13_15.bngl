@@ -1,0 +1,3 @@
+generate_network({overwrite=>1,TextReaction=>0})
+simulate_ode({suffix=>"meanEN0_5std_cell_10seed3_manualmatch",t_start=>0,t_end=>400,n_steps=>4000})
+writeSBML({suffix=>"meanEN0_5std_cell_10seed3_manualmatch"})

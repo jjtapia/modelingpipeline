@@ -1,0 +1,10 @@
+begin   parameters
+nEndo   80
+vol_EC   3965.1425
+vol_CP   884.8411
+vol_NU   267.8609
+vol_EN   2.5665
+sa_PM   607
+sa_NM   316
+sa_EM   121
+end   parameters

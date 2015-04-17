@@ -1,0 +1,63 @@
+begin parameters
+  nEndo           80      # mean number of endosomes
+
+ 
+  eff_width       1    # effective surface width um
+  rxn_layer_t       eff_width    # parameter used by the json converter for surface-surface reaction rate correction
+
+  L_um3           1e-15   # Liters/(cubic micron)
+  nAvo 6.022e23 #units: mole^-1
+  vol_PM sa_PM*eff_width # volumes in um^3
+  vol_NM sa_NM*eff_width
+  vol_EM sa_EM*eff_width
+  
+  
+
+  #cL0 6.80e-9 #units: M
+  #cR0 1e-6 #units M
+  #cR0 5e-8 #units mol/(dm)^2
+  #cTF0 5e-9 #units M
+  #cNP 20 #mc/um^2
+  #cIm 4e-9 #units M
+  
+  L0              cL0*nAvo*(vol_EC-vol_CP)*L_um3 #14000  # mol/L*molecules/mol*um^3*L/um^3 = initial species counts (extensive units: quantity, not concentration)
+  R0              cR0*nAvo*sa_PM   # mol/um^2*molecules/mol*um^2 = molecules
+  TF0             cTF0*nAvo*(vol_CP-vol_NU-vol_EN)*L_um3 #2357  # mol/L*molecules/mol*um^3*L/um^3  = molecules
+  DNA0            2
+  Im0             cIm0*nAvo*(vol_CP-vol_NU-vol_EN)*L_um3 #2587  # mol/L*molecules/mol*um^3*L/um^3  = molecules
+  NP0             cNP0*nAvo*sa_NM  #2469 # mol/um^2*molecules/mol*um^2 = molecules
+
+  kp_LR           0.1    # kinetic parameters (2nd order reaction params in vol/time units)
+  km_LR           1.0    
+  kp_LL           0.1
+  km_LL           1.0
+  k_R_endo        1.0
+  k_recycle       0.1
+  k_R_transphos   1.0
+  k_R_dephos      0.1
+  kp_R_TF         0.1
+  km_R_TF         0.1
+  kp_R_TFp        0.1
+  km_R_TFp        10.0
+  k_TF_transphos  1.0
+  k_TF_dephos     1.0
+  kp_TF_TF        1.0
+  km_TF_TF        0.1
+  kp_TF_p1        1.0
+  km_TF_p1        0.1
+  k_transcribe    1.0
+  k_translate     1.0
+  k_mRNA_to_CP    1.0
+  k_mRNA_deg      1.0
+  k_P_deg         0.1
+  k_Im_bind_CP    0.1
+  k_Im_unbind_CP  0.1
+  k_Im_bind_NU    0.1
+  k_Im_unbind_NU  10.0
+  k_Im_enters_NP  0.1
+  k_Im_exits_NP   1.0
+  k_Im_cross_NP   1.0
+  kp_P1_p2        1.0
+  km_P1_p2        0.1
+
+ end parameters
