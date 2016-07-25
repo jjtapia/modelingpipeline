@@ -9,7 +9,7 @@ begin parameters
   vol_EM sa_EM*eff_width
   
   
-
+  rxn_layer_t 0.01 #units um
   cL0 6.80e-9 #units: M
   #cR0 1e-6 #units M
   cR0 5e-8 #units mol/(dm)^2

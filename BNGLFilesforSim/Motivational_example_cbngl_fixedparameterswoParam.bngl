@@ -180,3 +180,4 @@ end model
 #simulate_ode({t_start=>20,t_end=>50,n_steps=>100})
 
 readFile({file=>"SpatialActionsIntermediate.bngl"})
+writeSBML({})
