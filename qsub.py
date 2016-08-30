@@ -68,17 +68,6 @@ def start_queue(test, queue, batchSize, nodes=1):
         currentdirectory = os.getcwd()
         processors = "nodes={1}:ppn={0}".format(
             batchSize, nodes)
-        command = ''
-                   '-seed', str(random.randint(1, 100000))]
-
-        if outputtype == "atomize":
-            tail_job_string = """%s
-            cd ${SCRDIR}
-            """ % (command)
-        else:
-            tail_job_string = """cd ${SCRDIR}
-            %s
-            """ % (command)
 
         job_string = """#!/bin/bash
         #PBS -N %s
