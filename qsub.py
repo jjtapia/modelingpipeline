@@ -45,7 +45,7 @@ import tempfile
 import yaml
 
 
-def start_queue(test, queue, batchSize, nodes=1):
+def start_queue(test, queue, batchSize, repetitions):
     """
     sends a batch job with the qsub queue and executes a command over it.
     using PBS commands
@@ -55,7 +55,6 @@ def start_queue(test, queue, batchSize, nodes=1):
     queue -- The queue we will send the job to. It has to make reference to an entry in queue_list
     batchsize -- The total number of jobs per batch job. (in other words, the number of nodes we will be using is <fileNameSet>/<batchSize>. Typically you want this to be a multiple of the number of cores per node.)
     """
-    repetitions = 50
     progress = progressbar.ProgressBar()
     for idx in progress(range(0,repetitions)):
 
@@ -83,7 +82,7 @@ def start_queue(test, queue, batchSize, nodes=1):
         ##PBS -m abe  # (a = abort, b = begin, e = end)
         PYTHONPATH=$PYTHONPATH:./:./SBMLparser
         PATH=/usr/local/anaconda/bin:$PATH
-        SCRDIR=/scr/$PBS_JOBID
+        SCRDIR=/scr/%s/$PBS_JOBID
 
         #if the scratch drive doesn't exist (it shouldn't) make it.
         if [[ ! -e $SCRDIR ]]; then
@@ -96,7 +95,7 @@ def start_queue(test, queue, batchSize, nodes=1):
 
         python analyzeModelSet.py -t MCellRuns/%s/mcell -r %s -w ${SCRDIR}
        
-        """ % (job_name, walltime, processors, queue, test, batchsize)
+        """ % (job_name, walltime, processors, queue, test, test, batchsize)
 
         # Send job_string to qsub
         input.write(job_string)
@@ -125,7 +124,7 @@ def defineConsole():
     parser.add_argument('-q', '--queue', type=str, help='queue to run in')
     parser.add_argument('-b', '--batch', type=int, help='batch size')
     parser.add_argument('-t', '--test', type=str)
-
+    parser.add_argument('-r', '--repetitions', type=int)
     return parser
 
 
@@ -135,9 +134,9 @@ if __name__ == "__main__":
     test = namespace.test
     queue = namespace.queue
     batchsize = namespace.batch
-
+    repetitions = namespace.repetitions
 
     # print len(finalfiles)
 
-    start_queue(test, queue, batchsize)
+    start_queue(test, queue, batchsize, repetitions)
     
