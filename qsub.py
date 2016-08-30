@@ -63,7 +63,7 @@ def start_queue(test, queue, batchSize, nodes=1):
         output, input = popen2('qsub')
 
         # Customize your options here
-        job_name = "jjtv_{0}_{1}".format(outputtype, idx)
+        job_name = "jjtv_{0}".format(idx)
         walltime = "10:00:00"
         currentdirectory = os.getcwd()
         processors = "nodes={1}:ppn={0}".format(
