@@ -16,7 +16,7 @@ import pandas
 home = expanduser("~")
 import csv
 #mcellExecutable = join(home, 'workspace', 'mcell', 'build', 'mcell')
-mcellExecutable = join('usr','local','bin','mcell')
+mcellExecutable = join('/usr','local','bin','mcell')
 #mcellExecutable = join(home, 'workspace', 'mcell', 'debug', 'mcell')
 from collections import defaultdict
 import misc
@@ -114,7 +114,7 @@ def parallelHandling(function, options = {}, postExecutionFunction=dummy, postOp
     progress = progressbar.ProgressBar(maxval=options['repetitions']).start()
     i = 0
     print 'running in {0} cores'.format(workers)
-    '''with concurrent.futures.ProcessPoolExecutor(max_workers=workers) as executor:
+    with concurrent.futures.ProcessPoolExecutor(max_workers=workers) as executor:
         for idx in range(options['repetitions']):
             options['workerIdx'] = str(idx)
             futures.append(executor.submit(function, options))
@@ -123,8 +123,8 @@ def parallelHandling(function, options = {}, postExecutionFunction=dummy, postOp
             postExecutionFunction(postOptions)
             i += 1
             progress.update(i)
-    '''
-    callMDLTest(options)
+    
+    
     progress.finish()
 
 
