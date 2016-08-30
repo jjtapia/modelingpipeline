@@ -65,8 +65,8 @@ def start_queue(test, queue, batchSize, repetitions):
         job_name = "jjtv_{0}".format(idx)
         walltime = "10:00:00"
         currentdirectory = os.getcwd()
-        processors = "nodes={1}:ppn={0}".format(
-            batchSize, nodes)
+        processors = "nodes=1:ppn={0}".format(
+            batchSize)
 
         job_string = """#!/bin/bash
         #PBS -N %s
