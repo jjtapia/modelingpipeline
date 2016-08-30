@@ -15,7 +15,8 @@ import random
 import pandas
 home = expanduser("~")
 import csv
-mcellExecutable = join(home, 'workspace', 'mcell', 'build', 'mcell')
+#mcellExecutable = join(home, 'workspace', 'mcell', 'build', 'mcell')
+mcellExecutable = join('usr','local','bin','mcell')
 #mcellExecutable = join(home, 'workspace', 'mcell', 'debug', 'mcell')
 from collections import defaultdict
 import misc
