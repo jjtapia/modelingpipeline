@@ -82,7 +82,7 @@ def start_queue(test, queue, batchSize, repetitions):
         ##PBS -m abe  # (a = abort, b = begin, e = end)
         PYTHONPATH=$PYTHONPATH:./:./SBMLparser
         PATH=/usr/local/anaconda/bin:$PATH
-        SCRDIR=/scr/%s$PBS_JOBID
+        SCRDIR=$PBS_O_WORKDIR/results/%s$PBS_JOBID
 
         #if the scratch drive doesn't exist (it shouldn't) make it.
         if [[ ! -e $SCRDIR ]]; then
