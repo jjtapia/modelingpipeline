@@ -124,7 +124,7 @@ def parallelHandling(function, options = {}, postExecutionFunction=dummy, postOp
             i += 1
             progress.update(i)
     '''
-    callMDLTest(**options)
+    callMDLTest(options)
     progress.finish()
 
 
