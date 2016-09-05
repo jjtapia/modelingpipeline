@@ -99,11 +99,17 @@ def processMDLoutput(postOptions):
     #trajectorydata['seed'] = postOptions['seed']
     inputdir = os.path.join(postOptions['workdir'], postOptions['workerIdx'])
     #print inputdir
-    gdatFiles = getFiles(inputdir, 'txt')
+    gdatFiles = getFiles(inputdir, 'dat')
 
-    trajectorydata = misc.processMDLData(gdatFiles[0], postOptions['workerIdx'])
+    finaltrajectory = {'Seconds':[], 'Observable':[], 'Value':[], 'Origin':[]}
+    for gdat in gdatFiles:
+        trajectorydata = misc.processMDLData(gdatFiles[0], postOptions['workerIdx'])
+        finaltrajectory['Seconds'].extend(trajectorydata['Seconds'])
+        finaltrajectory['Observable'].extend(trajectorydata['Observable'])
+        finaltrajectory['Value'].extend(trajectorydata['Value'])
+        finaltrajectory['Origin'].extend(trajectorydata['Origin'])
 
-    localTrajectory = pandas.DataFrame(trajectorydata)
+    localTrajectory = pandas.DataFrame(finaltrajectory)
     postOptions['dataset'] = pandas.concat([postOptions['dataset'], localTrajectory])
     shutil.rmtree(inputdir)
 
@@ -114,6 +120,7 @@ def parallelHandling(function, options = {}, postExecutionFunction=dummy, postOp
     progress = progressbar.ProgressBar(maxval=options['repetitions']).start()
     i = 0
     print 'running in {0} cores'.format(workers)
+    callMDLTest(options)
     with concurrent.futures.ProcessPoolExecutor(max_workers=workers) as executor:
         for idx in range(options['repetitions']):
             options['workerIdx'] = str(idx)

@@ -43,18 +43,14 @@ def processMDLData(fileName, iteration):
     trajectorydata = defaultdict(list)
     trajectorydata['iteration'] = iteration
     with open(fileName, 'rb') as f:
-        data = csv.DictReader(f, delimiter=' ')
-
+        data = f.readlines()
         for row in data:
-            for key in row:
-                if key == 'Seconds':
-                    continue
-                    #trajectorydata[key].append(float(row[key]))
-                else:
-                    trajectorydata['Seconds'].append(float(row['Seconds']))
-                    trajectorydata['Observable'].append(key)
-                    trajectorydata['Value'].append(int(row[key]))
-                    trajectorydata['Origin'].append('Standard MCell')
+            key = row.split(' ')[0]
+            data = row.split(' ')[1]
+            trajectorydata['Seconds'].append(float(key))
+            trajectorydata['Observable'].append(fileName.split(os.sep)[-1].split('.')[0])
+            trajectorydata['Value'].append(int(data))
+            trajectorydata['Origin'].append('Standard MCell')
     return trajectorydata
 
 def MDLRTrajectoryGeneration(params, trajectorydataset):
