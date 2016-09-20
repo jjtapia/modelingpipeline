@@ -1,0 +1,79 @@
+/* DEFINE PARAMETERS */
+Nav = 602200000    /* Avogadro number for 1 um^3  */
+KB = 1.3806488e-19    /* Boltzmann constant    units=cm^2.kg/K.s^2 */
+gamma = 0.5722    /* Euler's constant  */
+T = 298.25    /*    units=K */
+h = 0.01    /*    units=um */
+Rs = 0.002564    /*    units=um */
+Rc = 0.0015    /*    units=um */
+mu_EC = 1e-09    /* viscosity    units=kg/um.s */
+mu_PM = 1e-09    /* viscosity    units=kg/um.s */
+mu_CP = 1e-09    /* viscosity    units=kg/um.s */
+mu_NM = 1e-09    /* viscosity    units=kg/um.s */
+mu_NU = 1e-09    /* viscosity    units=kg/um.s */
+mu_EM = 1e-09    /* viscosity    units=kg/um.s */
+mu_EN = 1e-09    /* viscosity    units=kg/um.s */
+vol_CP = 522.0448    /*    units=unknown */
+sa_PM = 573.7872    /*    units=unknown */
+vol_NU = 99.6831    /*    units=unknown */
+sa_NM = 172.899    /*    units=unknown */
+vol_EN = 8.971    /*    units=unknown */
+sa_EM = 126.0476    /*    units=unknown */
+vol_EC = 2334.2996    /*    units=unknown */
+sa_EC = 1398.0175    /*    units=unknown */
+cL0 = 9e-09    /*    units=unknown */
+cR0 = 7.860978e-23    /*    units=unknown */
+cTF0 = 1.551913e-08    /*    units=unknown */
+cNP0 = 1.228828e-23    /*    units=unknown */
+cIm0 = 1.7e-08    /*    units=unknown */
+nEndo = 80    /*    units=unknown */
+eff_width = 0.01    /*    units=unknown */
+L_um3 = 1e-15    /*    units=unknown */
+nAvo = 6.022e+23    /*    units=unknown */
+DNA0 = 2    /*    units=unknown */
+kp_LR = 0.1    /*    units=unknown */
+km_LR = 1    /*    units=unknown */
+kp_LL = 0.1    /*    units=unknown */
+km_LL = 1    /*    units=unknown */
+k_R_endo = 1    /*    units=unknown */
+k_recycle = 0.1    /*    units=unknown */
+k_R_transphos = 1    /*    units=unknown */
+k_R_dephos = 0.1    /*    units=unknown */
+kp_R_TF = 0.1    /*    units=unknown */
+km_R_TF = 0.1    /*    units=unknown */
+kp_R_TFp = 0.1    /*    units=unknown */
+km_R_TFp = 10    /*    units=unknown */
+k_TF_transphos = 1    /*    units=unknown */
+k_TF_dephos = 1    /*    units=unknown */
+kp_TF_TF = 1    /*    units=unknown */
+km_TF_TF = 0.1    /*    units=unknown */
+kp_TF_p1 = 1    /*    units=unknown */
+km_TF_p1 = 0.1    /*    units=unknown */
+k_transcribe = 1    /*    units=unknown */
+k_translate = 1    /*    units=unknown */
+k_mRNA_to_CP = 1    /*    units=unknown */
+k_mRNA_deg = 1    /*    units=unknown */
+k_P_deg = 0.1    /*    units=unknown */
+k_Im_bind_CP = 0.1    /*    units=unknown */
+k_Im_unbind_CP = 0.1    /*    units=unknown */
+k_Im_bind_NU = 0.1    /*    units=unknown */
+k_Im_unbind_NU = 10    /*    units=unknown */
+k_Im_enters_NP = 0.1    /*    units=unknown */
+k_Im_exits_NP = 1    /*    units=unknown */
+k_Im_cross_NP = 1    /*    units=unknown */
+kp_P1_p2 = 1    /*    units=unknown */
+km_P1_p2 = 0.1    /*    units=unknown */
+rxn_layer_t = 0.01    /*    units=unknown */
+vol_PM = 5.737872    /*    units=unknown */
+vol_NM = 1.72899    /*    units=unknown */
+vol_EM = 1.260476    /*    units=unknown */
+L0 = 9822.05856504    /*    units=unknown */
+R0 = 27162.402963519    /*    units=unknown */
+TF0 = 3863.3924292856    /*    units=unknown */
+Im0 = 4232.04595218    /*    units=unknown */
+NP0 = 1279.45298314418    /*    units=unknown */
+vol_EN1 = 8.971    /*    units=unknown */
+sa_EN1 = 126.0476    /*    units=unknown */
+sa_NU = 172.899    /*    units=unknown */
+sa_CP = 573.7872    /*    units=unknown */
+

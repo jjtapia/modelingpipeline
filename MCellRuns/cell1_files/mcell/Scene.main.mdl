@@ -1,0 +1,384 @@
+INCLUDE_FILE = "Scene.parameters.mdl"
+
+ITERATIONS = 1
+TIME_STEP = 1e-05
+VACANCY_SEARCH_DISTANCE = 10
+
+INCLUDE_FILE = "Scene.initialization.mdl"
+
+PARTITION_X = [[-1 TO 1 STEP 0.100000001490116]]
+PARTITION_Y = [[-1 TO 1 STEP 0.100000001490116]]
+PARTITION_Z = [[-1 TO 1 STEP 0.100000001490116]]
+
+INCLUDE_FILE = "Scene.molecules.mdl"
+
+INCLUDE_FILE = "Scene.reactions.mdl"
+
+INCLUDE_FILE = "Scene.geometry.mdl"
+
+INSTANTIATE Scene OBJECT
+{
+  CP OBJECT CP {}
+  EC OBJECT EC {}
+  EN OBJECT EN {}
+  NU OBJECT NU {}
+  Release_Site_s1 RELEASE_SITE
+  {
+   SHAPE = Scene.EC[ALL] - Scene.CP[ALL]
+   MOLECULE = S1
+   CONCENTRATION = 9e-09
+   RELEASE_PROBABILITY = 1
+  }
+  Release_Site_s2 RELEASE_SITE
+  {
+   SHAPE = Scene.CP[ALL]
+   MOLECULE = S2'
+   DENSITY = 47.3388
+   RELEASE_PROBABILITY = 1
+  }
+  Release_Site_s3 RELEASE_SITE
+  {
+   SHAPE = Scene.CP[ALL] - Scene.EN[ALL] - Scene.NU[ALL]
+   MOLECULE = S3
+   CONCENTRATION = 1.55191e-08
+   RELEASE_PROBABILITY = 1
+  }
+  Release_Site_s4 RELEASE_SITE
+  {
+   SHAPE = Scene.NU[ALL]
+   MOLECULE = S4
+   CONCENTRATION = 3.33171e-11
+   RELEASE_PROBABILITY = 1
+  }
+  Release_Site_s5 RELEASE_SITE
+  {
+   SHAPE = Scene.CP[ALL] - Scene.EN[ALL] - Scene.NU[ALL]
+   MOLECULE = S5
+   CONCENTRATION = 1.7e-08
+   RELEASE_PROBABILITY = 1
+  }
+  Release_Site_s6 RELEASE_SITE
+  {
+   SHAPE = Scene.NU[ALL]
+   MOLECULE = S6'
+   DENSITY = 7.4
+   RELEASE_PROBABILITY = 1
+  }
+  Release_Site_pattern_s16 RELEASE_SITE
+  {
+   SHAPE = Scene.EN[ALL]
+   MOLECULE = S14'
+   NUMBER_TO_RELEASE = 1
+   RELEASE_PROBABILITY = 1
+   RELEASE_PATTERN = rec_16
+  }
+  Release_Site_pattern_s25 RELEASE_SITE
+  {
+   SHAPE = Scene.EN[ALL]
+   MOLECULE = S23'
+   NUMBER_TO_RELEASE = 1
+   RELEASE_PROBABILITY = 1
+   RELEASE_PATTERN = rec_25
+  }
+  Release_Site_pattern_s26 RELEASE_SITE
+  {
+   SHAPE = Scene.CP[ALL]
+   MOLECULE = S12'
+   NUMBER_TO_RELEASE = 1
+   RELEASE_PROBABILITY = 1
+   RELEASE_PATTERN = rec_26
+  }
+  Release_Site_pattern_s56 RELEASE_SITE
+  {
+   SHAPE = Scene.EN[ALL]
+   MOLECULE = S34'
+   NUMBER_TO_RELEASE = 1
+   RELEASE_PROBABILITY = 1
+   RELEASE_PATTERN = rec_56
+  }
+  Release_Site_pattern_s57 RELEASE_SITE
+  {
+   SHAPE = Scene.EN[ALL]
+   MOLECULE = S35'
+   NUMBER_TO_RELEASE = 1
+   RELEASE_PROBABILITY = 1
+   RELEASE_PATTERN = rec_57
+  }
+  Release_Site_pattern_s58 RELEASE_SITE
+  {
+   SHAPE = Scene.CP[ALL]
+   MOLECULE = S11'
+   NUMBER_TO_RELEASE = 1
+   RELEASE_PROBABILITY = 1
+   RELEASE_PATTERN = rec_58
+  }
+  Release_Site_pattern_s59 RELEASE_SITE
+  {
+   SHAPE = Scene.CP[ALL]
+   MOLECULE = S2'
+   NUMBER_TO_RELEASE = 1
+   RELEASE_PROBABILITY = 1
+   RELEASE_PATTERN = rec_59
+  }
+  Release_Site_pattern_s60 RELEASE_SITE
+  {
+   SHAPE = Scene.CP[ALL]
+   MOLECULE = S8'
+   NUMBER_TO_RELEASE = 1
+   RELEASE_PROBABILITY = 1
+   RELEASE_PATTERN = rec_60
+  }
+  Release_Site_pattern_s61 RELEASE_SITE
+  {
+   SHAPE = Scene.CP[ALL]
+   MOLECULE = S15'
+   NUMBER_TO_RELEASE = 1
+   RELEASE_PROBABILITY = 1
+   RELEASE_PATTERN = rec_61
+  }
+  Release_Site_pattern_s113 RELEASE_SITE
+  {
+   SHAPE = Scene.EN[ALL]
+   MOLECULE = S41'
+   NUMBER_TO_RELEASE = 1
+   RELEASE_PROBABILITY = 1
+   RELEASE_PATTERN = rec_113
+  }
+  Release_Site_pattern_s114 RELEASE_SITE
+  {
+   SHAPE = Scene.CP[ALL]
+   MOLECULE = S19'
+   NUMBER_TO_RELEASE = 1
+   RELEASE_PROBABILITY = 1
+   RELEASE_PATTERN = rec_114
+  }
+  Release_Site_pattern_s115 RELEASE_SITE
+  {
+   SHAPE = Scene.CP[ALL]
+   MOLECULE = S20'
+   NUMBER_TO_RELEASE = 1
+   RELEASE_PROBABILITY = 1
+   RELEASE_PATTERN = rec_115
+  }
+  Release_Site_pattern_s116 RELEASE_SITE
+  {
+   SHAPE = Scene.CP[ALL]
+   MOLECULE = S22'
+   NUMBER_TO_RELEASE = 1
+   RELEASE_PROBABILITY = 1
+   RELEASE_PATTERN = rec_116
+  }
+  Release_Site_pattern_s117 RELEASE_SITE
+  {
+   SHAPE = Scene.CP[ALL]
+   MOLECULE = S24'
+   NUMBER_TO_RELEASE = 1
+   RELEASE_PROBABILITY = 1
+   RELEASE_PATTERN = rec_117
+  }
+  Release_Site_pattern_s118 RELEASE_SITE
+  {
+   SHAPE = Scene.CP[ALL]
+   MOLECULE = S25'
+   NUMBER_TO_RELEASE = 1
+   RELEASE_PROBABILITY = 1
+   RELEASE_PATTERN = rec_118
+  }
+  Release_Site_pattern_s119 RELEASE_SITE
+  {
+   SHAPE = Scene.EC[ALL] - Scene.CP[ALL]
+   MOLECULE = S9
+   NUMBER_TO_RELEASE = 1
+   RELEASE_PROBABILITY = 1
+   RELEASE_PATTERN = rec_119
+  }
+  Release_Site_pattern_s120 RELEASE_SITE
+  {
+   SHAPE = Scene.EC[ALL] - Scene.CP[ALL]
+   MOLECULE = S1
+   NUMBER_TO_RELEASE = 1
+   RELEASE_PROBABILITY = 1
+   RELEASE_PATTERN = rec_120
+  }
+  Release_Site_pattern_s156 RELEASE_SITE
+  {
+   SHAPE = Scene.EN[ALL]
+   MOLECULE = S42'
+   NUMBER_TO_RELEASE = 1
+   RELEASE_PROBABILITY = 1
+   RELEASE_PATTERN = rec_156
+  }
+  Release_Site_pattern_s157 RELEASE_SITE
+  {
+   SHAPE = Scene.CP[ALL]
+   MOLECULE = S30'
+   NUMBER_TO_RELEASE = 1
+   RELEASE_PROBABILITY = 1
+   RELEASE_PATTERN = rec_157
+  }
+  Release_Site_pattern_s158 RELEASE_SITE
+  {
+   SHAPE = Scene.CP[ALL]
+   MOLECULE = S31'
+   NUMBER_TO_RELEASE = 1
+   RELEASE_PROBABILITY = 1
+   RELEASE_PATTERN = rec_158
+  }
+  Release_Site_pattern_s159 RELEASE_SITE
+  {
+   SHAPE = Scene.CP[ALL]
+   MOLECULE = S33'
+   NUMBER_TO_RELEASE = 1
+   RELEASE_PROBABILITY = 1
+   RELEASE_PATTERN = rec_159
+  }
+  Release_Site_pattern_s160 RELEASE_SITE
+  {
+   SHAPE = Scene.CP[ALL]
+   MOLECULE = S36'
+   NUMBER_TO_RELEASE = 1
+   RELEASE_PROBABILITY = 1
+   RELEASE_PATTERN = rec_160
+  }
+  Release_Site_pattern_s174 RELEASE_SITE
+  {
+   SHAPE = Scene.EN[ALL]
+   MOLECULE = S47'
+   NUMBER_TO_RELEASE = 1
+   RELEASE_PROBABILITY = 1
+   RELEASE_PATTERN = rec_174
+  }
+  Release_Site_pattern_s175 RELEASE_SITE
+  {
+   SHAPE = Scene.CP[ALL]
+   MOLECULE = S37'
+   NUMBER_TO_RELEASE = 1
+   RELEASE_PROBABILITY = 1
+   RELEASE_PATTERN = rec_175
+  }
+  Release_Site_pattern_s207 RELEASE_SITE
+  {
+   SHAPE = Scene.EN[ALL]
+   MOLECULE = S55'
+   NUMBER_TO_RELEASE = 1
+   RELEASE_PROBABILITY = 1
+   RELEASE_PATTERN = rec_207
+  }
+  Release_Site_pattern_s208 RELEASE_SITE
+  {
+   SHAPE = Scene.EN[ALL]
+   MOLECULE = S56'
+   NUMBER_TO_RELEASE = 1
+   RELEASE_PROBABILITY = 1
+   RELEASE_PATTERN = rec_208
+  }
+  Release_Site_pattern_s209 RELEASE_SITE
+  {
+   SHAPE = Scene.CP[ALL]
+   MOLECULE = S43'
+   NUMBER_TO_RELEASE = 1
+   RELEASE_PROBABILITY = 1
+   RELEASE_PATTERN = rec_209
+  }
+  Release_Site_pattern_s269 RELEASE_SITE
+  {
+   SHAPE = Scene.EN[ALL]
+   MOLECULE = S57'
+   NUMBER_TO_RELEASE = 1
+   RELEASE_PROBABILITY = 1
+   RELEASE_PATTERN = rec_269
+  }
+  Release_Site_pattern_s270 RELEASE_SITE
+  {
+   SHAPE = Scene.CP[ALL]
+   MOLECULE = S44'
+   NUMBER_TO_RELEASE = 1
+   RELEASE_PROBABILITY = 1
+   RELEASE_PATTERN = rec_270
+  }
+  Release_Site_pattern_s271 RELEASE_SITE
+  {
+   SHAPE = Scene.CP[ALL]
+   MOLECULE = S45'
+   NUMBER_TO_RELEASE = 1
+   RELEASE_PROBABILITY = 1
+   RELEASE_PATTERN = rec_271
+  }
+  Release_Site_pattern_s272 RELEASE_SITE
+  {
+   SHAPE = Scene.CP[ALL]
+   MOLECULE = S46'
+   NUMBER_TO_RELEASE = 1
+   RELEASE_PROBABILITY = 1
+   RELEASE_PATTERN = rec_272
+  }
+  Release_Site_pattern_s273 RELEASE_SITE
+  {
+   SHAPE = Scene.CP[ALL]
+   MOLECULE = S48'
+   NUMBER_TO_RELEASE = 1
+   RELEASE_PROBABILITY = 1
+   RELEASE_PATTERN = rec_273
+  }
+  Release_Site_pattern_s274 RELEASE_SITE
+  {
+   SHAPE = Scene.CP[ALL]
+   MOLECULE = S50'
+   NUMBER_TO_RELEASE = 1
+   RELEASE_PROBABILITY = 1
+   RELEASE_PATTERN = rec_274
+  }
+  Release_Site_pattern_s275 RELEASE_SITE
+  {
+   SHAPE = Scene.CP[ALL]
+   MOLECULE = S51'
+   NUMBER_TO_RELEASE = 1
+   RELEASE_PROBABILITY = 1
+   RELEASE_PATTERN = rec_275
+  }
+  Release_Site_pattern_s315 RELEASE_SITE
+  {
+   SHAPE = Scene.CP[ALL] - Scene.EN[ALL] - Scene.NU[ALL]
+   MOLECULE = S67
+   NUMBER_TO_RELEASE = 1
+   RELEASE_PROBABILITY = 1
+   RELEASE_PATTERN = rec_315
+  }
+  Release_Site_pattern_s316 RELEASE_SITE
+  {
+   SHAPE = Scene.CP[ALL] - Scene.EN[ALL] - Scene.NU[ALL]
+   MOLECULE = S7
+   NUMBER_TO_RELEASE = 1
+   RELEASE_PROBABILITY = 1
+   RELEASE_PATTERN = rec_316
+  }
+  Release_Site_pattern_s333 RELEASE_SITE
+  {
+   SHAPE = Scene.CP[ALL] - Scene.EN[ALL] - Scene.NU[ALL]
+   MOLECULE = S7
+   NUMBER_TO_RELEASE = 1
+   RELEASE_PROBABILITY = 1
+   RELEASE_PATTERN = rec_333
+  }
+  Release_Site_pattern_s350 RELEASE_SITE
+  {
+   SHAPE = Scene.CP[ALL] - Scene.EN[ALL] - Scene.NU[ALL]
+   MOLECULE = S77
+   NUMBER_TO_RELEASE = 1
+   RELEASE_PROBABILITY = 1
+   RELEASE_PATTERN = rec_350
+  }
+  Release_Site_pattern_s351 RELEASE_SITE
+  {
+   SHAPE = Scene.CP[ALL] - Scene.EN[ALL] - Scene.NU[ALL]
+   MOLECULE = S7
+   NUMBER_TO_RELEASE = 1
+   RELEASE_PROBABILITY = 1
+   RELEASE_PATTERN = rec_351
+  }
+}
+
+sprintf(seed,"%05g",SEED)
+
+INCLUDE_FILE = "Scene.rxn_output.mdl"
+
