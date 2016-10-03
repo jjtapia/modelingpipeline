@@ -1,3 +1,3 @@
 generate_network({overwrite=>1,TextReaction=>0})
 writeSBML({suffix=>"meanEN0_5std_cell_10seed4_spatialParams"})
-simulate_ode({suffix=>"meanEN0_5std_cell_10seed4_spatialParams",t_start=>0,t_end=>25,n_steps=>1000})
+#simulate_ode({suffix=>"meanEN0_5std_cell_10seed4_spatialParams",t_start=>0,t_end=>25,n_steps=>1000})

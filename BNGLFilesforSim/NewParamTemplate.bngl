@@ -2,8 +2,9 @@ begin parameters
   nEndo           80      # mean number of endosomes
 
  
-  eff_width       1    # effective surface width um
- nAvo 6.022e23 #units: mole^-1
+  eff_width       0.01    # effective surface width um
+  rxn_layer_t       eff_width    # parameter used by the json converter for surface-surface reaction rate correction
+  nAvo 6.022e23 #units: mole^-1
   vol_PM sa_PM*eff_width # volumes in um^3
   vol_NM sa_NM*eff_width
   vol_EM sa_EM*eff_width

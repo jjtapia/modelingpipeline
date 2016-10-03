@@ -4,7 +4,6 @@ begin parameters
  
   eff_width       0.01    # effective surface width um
   rxn_layer_t       eff_width    # parameter used by the json converter for surface-surface reaction rate correction
-
   L_um3           1e-15   # Liters/(cubic micron)
   nAvo 6.022e23 #units: mole^-1
   vol_PM sa_PM*eff_width # volumes in um^3

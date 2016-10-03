@@ -11,6 +11,7 @@
 #Read Spatial params - these will be set per-cell instance
 readFile({file=>"SpatialParamsIntermediate.bngl"})
 #Read General params - these should not change from simulation to simulation
+
 readFile({file=>"NewParamTemplate.bngl"})
 
 
@@ -178,6 +179,5 @@ end model
 # actions #
 #generate_network({overwrite=>1,TextReaction=>0})
 #simulate_ode({t_start=>20,t_end=>50,n_steps=>100})
-
 readFile({file=>"SpatialActionsIntermediate.bngl"})
 writeSBML({})

@@ -77,7 +77,7 @@ def processFile(options):
     #split prefix
     filename = full_filename.split(".xml")
     savename = filename[0]
-    parentsavepath = "/Users/admin/MurphyLab/HTM/MCellRuns/"+savename
+    parentsavepath = "/home/proto/workspace/modelingpipeline/MCellRuns/"+savename
     saveloc = parentsavepath+".blend"
     bpy.ops.wm.save_mainfile(filepath=saveloc)
     #bpy.ops.wm.save_mainfile(filepath="/Users/admin/Murphylab/HTM/FilesToExport2/fullImportTest3.blend")

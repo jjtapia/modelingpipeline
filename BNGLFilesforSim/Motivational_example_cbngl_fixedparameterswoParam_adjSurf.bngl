@@ -9,7 +9,8 @@
 #Importing the parameters from a separate file 
 #Note: Order of import matters since some genral parameters are dependent on spatial params
 #Read Spatial params - these will be set per-cell instance
-readFile({file=>"SpatialParamsIntermediate.bngl"})
+#readFile({file=>"SpatialParamsIntermediate.bngl"})
+readFile({file=>"SpatialParams.bngl"})
 #Read General params - these should not change from simulation to simulation
 readFile({file=>"initConc.bngl"})
 
@@ -19,9 +20,9 @@ readFile({file=>"NewParamTemplate_adjSurf_manual.bngl"})
 begin model
 
 begin compartments
-  EC  3  vol_EC 
+  EC  3  (vol_EC-vol_CP)
   PM  2  sa_PM * eff_width          EC
-  CP  3  vol_CP                     PM
+  CP  3  (vol_CP-vol_NU-vol_EN)     PM
   NM  2  sa_NM * eff_width          CP
   NU  3  vol_NU                     NM
   EM  2  sa_EM * eff_width        CP
@@ -181,3 +182,4 @@ end model
 #generate_network({overwrite=>1,TextReaction=>0})
 #simulate_ode({t_start=>20,t_end=>50,n_steps=>100})
 readFile({file=>"SpatialActionsIntermediate.bngl"})
+writeSBML({})
