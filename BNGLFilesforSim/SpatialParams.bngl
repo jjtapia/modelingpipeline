@@ -1,12 +1,12 @@
 begin  parameters
-	 vol_CP 522.0448
-	 sa_PM 573.7872
-	 vol_NU 99.6831
-	 sa_NM 172.899
-	 vol_EN 8.971
-	 sa_EM 126.0476
-	 vol_EC 2334.2996
-	 sa_EC 1398.0175
+	 vol_CP 504.19
+	 sa_PM 573.79
+	 vol_NU 90.38
+	 sa_NM 172.9
+	 vol_EN 8.66
+	 sa_EM 138.74
+	 vol_EC 2334.3
+	 sa_EC 1398
 end  parameters
 
 
